@@ -1,0 +1,309 @@
+/* @import url("font-awesome.min.css"); */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* @import url("animation.css");
+@import url("portfolioCarousel.css"); */
+@font-face {
+  font-family: "gothic";
+  src: url("./assets/fonts/gothic.eot");
+  src: local("gothic"), url("./assets/fonts/gothic.woff") format("woff"),
+    url("./assets/fonts/gothic.ttf") format("truetype");
+}
+/*font-family: 'Advent Pro', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;*/
+*, *:focus, *:active, button:focus, .btn.focus, .btn:focus {
+  outline: none;
+  border-color: none;
+  box-shadow: none;
+}
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+body {
+  background-color: #000000;
+  background-image: url(./assets/img/space.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  color: #244e5c;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  height: 100%;
+  width: 100%
+}
+#root {
+  height: 100%;
+}
+#body {
+  height: 80vh;
+  width: 101.6%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
+  @media screen and (min-width: 568px){
+    height: 65vh;
+  }
+  @media screen and (min-width: 768px){
+    height: 88vh;
+  }
+  @media screen and (min-width: 1024px){
+    height: 85vh;
+  }
+}
+.App {
+  height: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+}
+a {
+  color: #12c3d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  transition: all 0.2s linear 0s;
+  color: #979DAC;
+}
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+a img {
+  border: 0;
+}
+h1.logo,
+h1.logo a {
+  color: #e7fbfc;
+  font-family: "gothic";
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.073em;
+  @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 6rem;
+  }
+}
+h1,
+h1 a {
+  color: #e7fbfc;
+  font-family: "gothic";
+  font-size: 32px;
+  font-weight: normal;
+}
+h2,
+h2 a {
+  color: #e7fbfc;
+  font-family: "gothic";
+  font-size: 28px;
+  font-weight: normal;
+}
+h3,
+h3 a {
+  color: #87d5fb;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+h4,
+h4 a {
+  color: #87d5fb;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+}
+h5,
+h5 a {
+  color: #e7fbfc;
+  font-family: "gothic";
+  font-size: 20px;
+  font-weight: normal;
+}
+h6,
+h6 a {
+  color: #87d5fb;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+p,
+ul,
+ol {
+  color: #f3f3f3;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+hr {
+  background-color: #e5d3c5;
+  border: 0 none;
+  height: 1px;
+}
+#galaxy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/*========= HEADER START =========*/
+.headerWide {
+  background: rgba(255, 255, 255, 0.06);
+  padding-top: 9px;
+  padding-bottom: 9px;
+  z-index: 2;
+}
+.headerWide h1 a:hover {
+  color: #e7fbfc;
+}
+.headerWide .cta {
+  margin: 13px 0;
+  text-align: right;
+}
+.headerWide .cta li a {
+  font-size: 16px;
+  padding: 4px 20px;
+}
+/*========= HEADER END =========*/
+/*========= SPLASH CTA START =========*/
+.cta {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.cta li {
+  display: inline-block;
+  margin: 0 7px;
+}
+.cta li a {
+  border: 1px solid #87d5fb;
+  color: #87d5fb;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: normal;
+  padding: 6px 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cta li a:hover {
+  border: 1px solid #e7fbfc;
+  color: #e7fbfc;
+  text-decoration: none;
+}
+.splashWide {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -43%);
+  -ms-transform: translate(-50%, -43%);
+  transform: translate(-50%, -43%);
+  .cta {
+    margin: 20px 0 0;
+    li {
+      margin: 0 7px 14px;
+      a {
+        display: block;
+        font-size: 0.9rem;
+        @media screen and (min-width: 1600px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+/*========= SPLASH CTA END =========*/
+/*========= FOOTER START =========*/
+.footerWide {
+  background: rgba(255, 255, 255, 0.06);
+  position: fixed;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+}
+.footerWide p {
+  color: #fff;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  @media screen and (min-width: 568px) {
+    color: #767676;
+  }
+}
+.footerWide ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+}
+.footerWide ul li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 5px;
+}
+.footerWide ul li a {
+  background: rgba(24, 64, 123, 0.5);
+  color: #a0ebf3;
+  display: block;
+  padding: 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+}
+.footerWide ul li a:hover,
+.footerWide ul li a:focus {
+  background: rgba(24, 64, 123, 0.8);
+  color: #ffffff;
+}
+.footerContact {
+  display: block;
+  text-align: right;
+}
+.footerContact .fa {
+  color: #e7fbfc;
+  font-size: 23px;
+}
+/*========= FOOTER END =========*/
+/*-------------------------CLEAR START-----------------------------*/
+/* Clear Floated Elements */
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/*-------------------------CLEAR END-------------------------------*/

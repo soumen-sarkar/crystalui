@@ -1,0 +1,86 @@
+.portfolioGalleryContainer {
+  height: 150px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px){
+    height: 300px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1024px){
+    height: 400px;
+    max-width: 1600px;
+    margin: 0 auto 30px;
+  }
+}
+.portfolioDetails {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
+      39 39,
+    auto;
+  width: 91%;
+  @media screen and (min-width: 568px) {
+    width: 94%;
+  }
+  @media screen and (min-width: 667px) {
+    width: 95%;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 97%;
+  }
+  @media screen and (min-width: 1600px) {
+    width: 98%;
+  }
+}
+.portfolioDetails > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+.portfolioDetails > div > div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5),
+    0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+}
+.portfolioDetailsContainer {
+  h3 {
+    margin-bottom: 20px;
+  }
+  ul {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 0 5px;
+      margin-bottom: 5px;
+      &:first-child {
+        color: #979dac;
+      }
+    }
+  }
+  p {
+    color: #7d8597;
+    @media screen and (min-width: 768px){
+      margin-bottom: 30px;
+    }
+  }
+  .btn {
+    span {
+      padding: 0 10px
+    }
+    svg {
+      fill: #fff;
+    }
+  }
+}
