@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/crystalui/static/css/main.3b5cb57a.chunk.css",
-    "main.js": "/crystalui/static/js/main.5a3c85a5.chunk.js",
-    "main.js.map": "/crystalui/static/js/main.5a3c85a5.chunk.js.map",
-    "runtime-main.js": "/crystalui/static/js/runtime-main.4f8e20cb.js",
-    "runtime-main.js.map": "/crystalui/static/js/runtime-main.4f8e20cb.js.map",
-    "static/js/2.aa854dfb.chunk.js": "/crystalui/static/js/2.aa854dfb.chunk.js",
-    "static/js/2.aa854dfb.chunk.js.map": "/crystalui/static/js/2.aa854dfb.chunk.js.map",
-    "index.html": "/crystalui/index.html",
-    "precache-manifest.74cf65e9ee65bf18433b1eaa18ed0887.js": "/crystalui/precache-manifest.74cf65e9ee65bf18433b1eaa18ed0887.js",
-    "service-worker.js": "/crystalui/service-worker.js",
-    "static/css/main.3b5cb57a.chunk.css.map": "/crystalui/static/css/main.3b5cb57a.chunk.css.map",
-    "static/js/2.aa854dfb.chunk.js.LICENSE.txt": "/crystalui/static/js/2.aa854dfb.chunk.js.LICENSE.txt",
-    "static/media/testimonials.scss": "/crystalui/static/media/bg.fe9f4e04.jpg",
-    "static/media/App.scss": "/crystalui/static/media/space.8e3f982b.jpg",
-    "static/media/me.png": "/crystalui/static/media/me.f42346fd.png",
-    "static/media/notFound.scss": "/crystalui/static/media/notFound.fbf65093.png"
+    "main.css": "/crystalui/tree/gh-pages/static/css/main.014f81ec.chunk.css",
+    "main.js": "/crystalui/tree/gh-pages/static/js/main.c0143002.chunk.js",
+    "main.js.map": "/crystalui/tree/gh-pages/static/js/main.c0143002.chunk.js.map",
+    "runtime-main.js": "/crystalui/tree/gh-pages/static/js/runtime-main.1565c948.js",
+    "runtime-main.js.map": "/crystalui/tree/gh-pages/static/js/runtime-main.1565c948.js.map",
+    "static/js/2.ca20558f.chunk.js": "/crystalui/tree/gh-pages/static/js/2.ca20558f.chunk.js",
+    "static/js/2.ca20558f.chunk.js.map": "/crystalui/tree/gh-pages/static/js/2.ca20558f.chunk.js.map",
+    "index.html": "/crystalui/tree/gh-pages/index.html",
+    "precache-manifest.29bfb4ea7410b0291150f4f9bbeba05a.js": "/crystalui/tree/gh-pages/precache-manifest.29bfb4ea7410b0291150f4f9bbeba05a.js",
+    "service-worker.js": "/crystalui/tree/gh-pages/service-worker.js",
+    "static/css/main.014f81ec.chunk.css.map": "/crystalui/tree/gh-pages/static/css/main.014f81ec.chunk.css.map",
+    "static/js/2.ca20558f.chunk.js.LICENSE.txt": "/crystalui/tree/gh-pages/static/js/2.ca20558f.chunk.js.LICENSE.txt",
+    "static/media/testimonials.scss": "/crystalui/tree/gh-pages/static/media/bg.fe9f4e04.jpg",
+    "static/media/App.scss": "/crystalui/tree/gh-pages/static/media/space.8e3f982b.jpg",
+    "static/media/me.png": "/crystalui/tree/gh-pages/static/media/me.f42346fd.png",
+    "static/media/notFound.scss": "/crystalui/tree/gh-pages/static/media/notFound.fbf65093.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f8e20cb.js",
-    "static/js/2.aa854dfb.chunk.js",
-    "static/css/main.3b5cb57a.chunk.css",
-    "static/js/main.5a3c85a5.chunk.js"
+    "static/js/runtime-main.1565c948.js",
+    "static/js/2.ca20558f.chunk.js",
+    "static/css/main.014f81ec.chunk.css",
+    "static/js/main.c0143002.chunk.js"
   ]
 }
