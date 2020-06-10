@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/crystalui/static/css/main.450fba34.chunk.css",
-    "main.js": "/crystalui/static/js/main.5440b1a9.chunk.js",
-    "main.js.map": "/crystalui/static/js/main.5440b1a9.chunk.js.map",
+    "main.js": "/crystalui/static/js/main.b79d4b0d.chunk.js",
+    "main.js.map": "/crystalui/static/js/main.b79d4b0d.chunk.js.map",
     "runtime-main.js": "/crystalui/static/js/runtime-main.4f8e20cb.js",
     "runtime-main.js.map": "/crystalui/static/js/runtime-main.4f8e20cb.js.map",
     "static/js/2.047c0aec.chunk.js": "/crystalui/static/js/2.047c0aec.chunk.js",
     "static/js/2.047c0aec.chunk.js.map": "/crystalui/static/js/2.047c0aec.chunk.js.map",
     "index.html": "/crystalui/index.html",
-    "precache-manifest.4f0c6cb3c2ec94f8f0cf894634e6ac00.js": "/crystalui/precache-manifest.4f0c6cb3c2ec94f8f0cf894634e6ac00.js",
+    "precache-manifest.79d4d2f478e72e3b9d7b75aea96b6ca3.js": "/crystalui/precache-manifest.79d4d2f478e72e3b9d7b75aea96b6ca3.js",
     "service-worker.js": "/crystalui/service-worker.js",
     "static/css/main.450fba34.chunk.css.map": "/crystalui/static/css/main.450fba34.chunk.css.map",
     "static/js/2.047c0aec.chunk.js.LICENSE.txt": "/crystalui/static/js/2.047c0aec.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.4f8e20cb.js",
     "static/js/2.047c0aec.chunk.js",
     "static/css/main.450fba34.chunk.css",
-    "static/js/main.5440b1a9.chunk.js"
+    "static/js/main.b79d4b0d.chunk.js"
   ]
 }

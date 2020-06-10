@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f6b0eb6aca2a57dd1f49e82804743a3",
+    "revision": "cadd6e3561448942d9a1e18cc437aa73",
     "url": "/crystalui/index.html"
   },
   {
-    "revision": "8f4041e4df6a24f86592",
+    "revision": "012d7ad058f8ed51c173",
     "url": "/crystalui/static/css/main.450fba34.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/crystalui/static/js/2.047c0aec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f4041e4df6a24f86592",
-    "url": "/crystalui/static/js/main.5440b1a9.chunk.js"
+    "revision": "012d7ad058f8ed51c173",
+    "url": "/crystalui/static/js/main.b79d4b0d.chunk.js"
   },
   {
     "revision": "c14035cd2d02cf5bf7da",
