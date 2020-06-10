@@ -4,7 +4,6 @@ import Pieces from "./pieces";
 function portfolioCanvas() {
   // Get all images and texts, get the `canvas` element, and save slider length
   var sliderCanvas = document.querySelector(".pieces-slider__canvas");
-  var sliderDetailsLink = document.querySelector(".project_details");
   var imagesEl = [].slice.call(
     document.querySelectorAll(".pieces-slider__image")
   );
@@ -195,10 +194,6 @@ function portfolioCanvas() {
       .querySelector(".pieces-slider__button--next")
       .addEventListener("click", nextItem);
 
-    document
-      .querySelector(".project_details")
-      .addEventListener("click", projectDetails);
-
     // Select prev or next slide using arrow keys
     document.addEventListener("keydown", function(e) {
       if (e.keyCode === 37) {
@@ -265,20 +260,12 @@ function portfolioCanvas() {
     });
   }
 
-  function projectDetails() {
-    const linkValue =
-      "/portfolio/" + items[currentImageIndex].value.getAttribute("alt");
-    return sliderDetailsLink.setAttribute("href", linkValue);
-  }
-  // projectDetails();
-
   // Select the prev item: hide current items, update indexes, and show the new current item
   function prevItem() {
     hideItems();
     currentIndex = currentIndex > 0 ? currentIndex - 1 : slidesLength - 1;
     updateIndexes();
     showItems();
-    projectDetails();
   }
 
   // Select the next item: hide current items, update indexes, and show the new current item
@@ -287,7 +274,6 @@ function portfolioCanvas() {
     currentIndex = currentIndex < slidesLength - 1 ? currentIndex + 1 : 0;
     updateIndexes();
     showItems();
-    projectDetails();
   }
 
   // Handle `resize` event

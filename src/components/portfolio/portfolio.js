@@ -10,9 +10,33 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 
 class Portfolio extends Component {
-  
-  componentDidUpdate() {
-      portfolioCanvas();
+  constructor(props) {
+    super(props);
+    this.state = {currentSlideIndex: 0};
+  }
+
+  componentWillMount(){
+    setTimeout(function(){ portfolioCanvas() }, 1000);
+  }
+
+  nextSlide = e => {
+    e.preventDefault();    
+    const { portfolio } = this.props;
+     if(this.state.currentSlideIndex < portfolio.length - 1){
+      this.setState({currentSlideIndex: this.state.currentSlideIndex + 1})
+    }else{
+      this.setState({currentSlideIndex: 0})
+    }
+  }
+
+  previousSlide = e => {
+    e.preventDefault();    
+    const { portfolio } = this.props;
+     if(this.state.currentSlideIndex > 0){
+      this.setState({currentSlideIndex: this.state.currentSlideIndex - 1})
+    }else{
+      this.setState({currentSlideIndex: portfolio.length - 1})
+    }
   }
 
   render() {
@@ -22,7 +46,7 @@ class Portfolio extends Component {
       return (
         <div className="pieces-slider">
           {portfolio.map(folio=>(
-            <div className="pieces-slider__slide" key={folio.id}>
+            <div key={folio.id} className="pieces-slider__slide">
             <img
               className="pieces-slider__image"
               src={folio.thumbnailUrl}
@@ -32,15 +56,20 @@ class Portfolio extends Component {
             <h2 className="pieces-subTitle__text">{folio.subTitleText}</h2>
           </div>
           ))}
-          <a href="link" className="project_details">
-            <canvas className="pieces-slider__canvas"></canvas>
-          </a>
-          <button className="pieces-slider__button pieces-slider__button--prev">
+
+          <canvas className="pieces-slider__canvas"></canvas>
+          
+          {portfolio.map((folio, i)=>(
+            i === this.state.currentSlideIndex ?
+              <Link className="canvas_link" to={`portfolio/${folio.id}`} key={folio.id}></Link> : null
+          ))}            
+          
+          <button onClick={this.previousSlide} className="pieces-slider__button pieces-slider__button--prev">
             <svg width="24" height="24">
               <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
             </svg>
           </button>
-          <button className="pieces-slider__button pieces-slider__button--next">
+          <button onClick={this.nextSlide} className="pieces-slider__button pieces-slider__button--next">
             <svg width="24" height="24">
               <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
             </svg>
