@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/crystalui/precache-manifest.2fd2c006291bfe7d7e082b56d93fd98d.js"
+  "/crystalui/precache-manifest.4f0c6cb3c2ec94f8f0cf894634e6ac00.js"
 );
 
 self.addEventListener('message', (event) => {
