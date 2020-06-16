@@ -16,7 +16,7 @@ class Portfolio extends Component {
   }
 
   componentWillMount(){
-    setTimeout(function(){ portfolioCanvas() }, 1000);
+    setTimeout(function(){ portfolioCanvas() }, 1500);
   }
 
   nextSlide = e => {
