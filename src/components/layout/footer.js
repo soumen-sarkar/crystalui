@@ -11,14 +11,14 @@ class footer extends Component {
           </div>
           <div className="col-5">
             <ul className="mb-0">
-              <li>
+              <!--<li>
                 <a
                   href="https://www.linkedin.com/in/soumen-sarkar-66ba6735/"
                   target="_blank" rel="noopener noreferrer"
                 >
                   <i className="fab fa-linkedin"></i>
                 </a>
-              </li>
+              </li>-->
               <li>
                 <a href="https://github.com/soumen-sarkar" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i>
