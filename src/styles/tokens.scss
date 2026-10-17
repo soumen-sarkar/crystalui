@@ -1,0 +1,45 @@
+// Design tokens — CRYSTAL UI
+$green: #9fe870;
+$green-soft: #c9f5ae;
+$green-deep: #163d2a;
+$ink: #17231d;
+$paper: #f8f9f5;
+$white: #ffffff;
+$muted: #647067;
+$line: #e4e9e2;
+$warn-bg: #fff4d6;
+$warn-ink: #5c4300;
+$danger: #b3261e;
+
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+:root {
+  --green: #{$green};
+  --green-soft: #{$green-soft};
+  --green-deep: #{$green-deep};
+  --ink: #{$ink};
+  --paper: #{$paper};
+  --white: #{$white};
+  --muted: #{$muted};
+  --line: #{$line};
+  --danger: #{$danger};
+
+  --font-display: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius: 20px;
+  --radius-lg: 32px;
+  --gutter: clamp(20px, 5vw, 56px);
+  --section: clamp(72px, 10vw, 144px);
+  --header-h: 72px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}

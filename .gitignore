@@ -5,6 +5,7 @@
 /_source
 /.pnp
 .pnp.js
+.parcel-cache
 
 # testing
 /coverage

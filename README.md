@@ -1,70 +1,66 @@
-![crystalui-in](https://user-images.githubusercontent.com/14568229/84760957-629cbf00-afe6-11ea-9a21-6ab8939f13c0.png)
+# CRYSTAL UI — studio website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React 19 + Parcel 2 + React Router + SCSS + Framer Motion + Lucide. JavaScript only.
 
-## Available Scripts
+```bash
+npm install
+npm start          # dev server on http://localhost:3000
+npm run build      # production build → dist/
+npm run clean
+```
 
-In the project directory, you can run:
+## Routes
+`/` · `/services` · `/work` · `/work/:slug` · `/about` · `/testimonials` · `/contact` · anything else → 404 page.
 
-### `npm start`
+## Editing content (no component changes needed)
+| File | What it controls |
+| --- | --- |
+| `src/data/siteContent.js` | Hero, process, why-us, about, nav, SEO titles, contact + social links, `showDemoNotices` |
+| `src/data/services.js` | Services, delivery label (`lead` / `team`) |
+| `src/data/projects.js` | Case studies. Lines starting `[To confirm]` are highlighted placeholders |
+| `src/data/testimonials.js` | Testimonials. Entries marked `demo: true` are placeholders |
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Before launch: replace demo content, set `showDemoNotices: false`, add real screenshots (`image` field in `projects.js`), and add social links.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Configuration (environment variables)
+Set in `.env` locally, or as GitHub repository **Variables** for deployment. They are inlined into public JS — never put secrets here.
 
-### `npm test`
+| Variable | Purpose |
+| --- | --- |
+| `SITE_URL` | Canonical URL used in `sitemap.xml`/`robots.txt` and meta tags |
+| `CUSTOM_DOMAIN` | Written to `dist/CNAME` |
+| `CONTACT_EMAIL` | Shown in footer/contact; enables the email fallback (opens the visitor's email app — the form never claims it was sent) |
+| `FORM_ENDPOINT` | Optional public form endpoint (e.g. Formspree). Takes priority over the email fallback |
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If neither `CONTACT_EMAIL` nor `FORM_ENDPOINT` is set, the form validates and then clearly says it is not connected.
 
-### `npm run build`
+## Deploying to GitHub Pages with a custom domain
+1. Create a repository (a dedicated one, e.g. `crystal-ui-site`) and push this project to `main`.
+2. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+3. **Settings → Secrets and variables → Actions → Variables:** add `SITE_URL` (`https://your-domain.com`), `CUSTOM_DOMAIN` (`your-domain.com`), `CONTACT_EMAIL`, optionally `FORM_ENDPOINT`.
+4. Push to `main` (or run the workflow manually). `.github/workflows/deploy.yml` builds and deploys `dist/`.
+5. **Settings → Pages → Custom domain:** enter your domain and save. The build also writes `dist/CNAME`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### DNS (at your domain registrar — adding the domain in GitHub does not configure DNS)
+Apex domain (`your-domain.com`):
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+| Type | Host | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| AAAA (optional) | @ | 2606:50c0:8000::153 · 2606:50c0:8001::153 · 2606:50c0:8002::153 · 2606:50c0:8003::153 |
+| CNAME | www | `<your-github-username>.github.io` |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then wait for DNS to propagate, and tick **Enforce HTTPS** in Settings → Pages once the certificate is issued (can take up to ~an hour). Verify current IPs in GitHub's docs: "Managing a custom domain for your GitHub Pages site".
 
-### `npm run eject`
+### Client-side routing on GitHub Pages
+Pages has no server rewrites, so the build copies `index.html` to `404.html`. Deep links such as `/work/buyhi` load the app shell and the router renders the right page (the HTTP status is 404, which is harmless for users; search engines rely on the sitemap). The build uses `--public-url /`, so the site must be served from a domain root (custom domain or `username.github.io`), not a `/repo-name/` subpath.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Still to supply
+- Real testimonials (exact wording, name, title, company, permission)
+- Project contribution details, screenshots and any verified outcomes
+- Business email, LinkedIn and GitHub URLs
+- `og:image` (1200×630 PNG)
+- Logo: `src/assets/*.svg` is generated by `scripts/make-logo.mjs` (Didact Gothic, uppercase, text converted to outlines)
