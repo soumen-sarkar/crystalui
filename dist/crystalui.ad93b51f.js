@@ -58939,7 +58939,7 @@ const projects = [
             accent: '#9FE870',
             ground: '#163D2A'
         },
-        image: null
+        image: 'https://github-production-user-asset-6210df.s3.amazonaws.com/14568229/676820805-87ccefd4-4a5a-4eda-bfdb-a08bed0b3ae0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261017T184650Z&X-Amz-Expires=300&X-Amz-Signature=b4cceeb00cddc4ab3d870ac63e29b942c3c47b0ceb9ec302ac7f2ca9405db1b7&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng'
     },
     {
         slug: 'mhw-ltd',
