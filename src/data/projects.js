@@ -13,7 +13,7 @@ import pureInstinct from 'url:../assets/projects/pureInstinct.png';
 export const projects = [
   {
     slug: 'buyhi',
-    name: 'BuyHi',
+    name: 'Human Improvement',
     brand: 'Human Improvement',
     url: 'https://buyhi.co/',
     industry: 'Health & wellness — dietary supplements',
