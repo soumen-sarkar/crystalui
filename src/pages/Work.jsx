@@ -16,9 +16,6 @@ export default function Work() {
         lines={['Selected projects,', 'honestly described.']}
         lead="These projects were delivered through development collaborations. Each case study states the studio's own contribution — the brands belong to their owners."
       />
-      <div className="container" style={{ paddingBottom: 32 }}>
-        <DemoBadge>Project details need your approval</DemoBadge>
-      </div>
       <div className="work-stack">
         {projects.map((p, i) => {
           const tone = ['white', 'deep', 'paper'][i % 3];

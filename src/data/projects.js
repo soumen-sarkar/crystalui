@@ -6,6 +6,10 @@
 // To add a real screenshot: put the file in src/assets/ and set  image: new URL('../assets/file.webp', import.meta.url)
 // (or import it) — the placeholder composition is replaced automatically.
 
+import buyhiImg from 'url:../assets/projects/buyHi.png';
+import mhwImg from 'url:../assets/projects/mhwLtd.png';
+import pureInstinct from 'url:../assets/projects/pureInstinct.png';
+
 export const projects = [
   {
     slug: 'buyhi',
@@ -25,7 +29,7 @@ export const projects = [
     outcomes: [], // Add only verified outcomes, e.g. 'Reduced theme JavaScript by X%' — leave empty otherwise.
     tech: ['Shopify', '[To confirm] Liquid', '[To confirm] JavaScript', '[To confirm] SCSS'],
     visual: { variant: 'a', accent: '#9FE870', ground: '#163D2A' },
-    image: 'https://github-production-user-asset-6210df.s3.amazonaws.com/14568229/676820805-87ccefd4-4a5a-4eda-bfdb-a08bed0b3ae0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261017T184650Z&X-Amz-Expires=300&X-Amz-Signature=b4cceeb00cddc4ab3d870ac63e29b942c3c47b0ceb9ec302ac7f2ca9405db1b7&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng',
+    image: buyhiImg,
   },
   {
     slug: 'mhw-ltd',
@@ -34,7 +38,7 @@ export const projects = [
     url: 'https://www.mhwltd.com/',
     industry: 'Beverage alcohol — importing, wholesale and back-office services',
     type: 'Corporate website with client resources',
-    platform: '[To confirm]',
+    platform: 'WordPress',
     summary: 'A content-rich corporate website for a US and EU beverage alcohol importer and wholesaler.',
     context:
       'MHW is a beverage alcohol importer, wholesaler and back-office service provider for the US and EU. The website explains its services, company and insights, and links clients and customers to portals and order tools.',
@@ -45,7 +49,7 @@ export const projects = [
     outcomes: [],
     tech: ['[To confirm]'],
     visual: { variant: 'b', accent: '#C9F5AE', ground: '#17231D' },
-    image: null,
+    image: mhwImg,
   },
   {
     slug: 'pure-instinct',
@@ -65,7 +69,7 @@ export const projects = [
     outcomes: [],
     tech: ['Shopify', '[To confirm] Liquid', '[To confirm] JavaScript', '[To confirm] SCSS'],
     visual: { variant: 'c', accent: '#9FE870', ground: '#F8F9F5' },
-    image: null,
+    image: pureInstinct,
   },
 ];
 

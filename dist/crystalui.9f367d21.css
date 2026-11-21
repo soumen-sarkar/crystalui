@@ -1609,7 +1609,6 @@ button, input, select, textarea {
   margin-bottom: 20px;
   font-size: .8125rem;
   font-weight: 600;
-  display: inline-flex;
 }
 
 .eyebrow:before {

@@ -27,7 +27,7 @@ export const site = {
     { label: 'Services', to: '/services' },
     { label: 'Work', to: '/work' },
     { label: 'About', to: '/about' },
-    { label: 'Clients', to: '/testimonials' },
+    // { label: 'Clients', to: '/testimonials' },
     { label: 'Contact', to: '/contact' },
   ],
 
@@ -35,7 +35,7 @@ export const site = {
     eyebrow: 'Independent web development studio',
     lines: ['Your vision.', 'Thoughtfully', 'engineered.'],
     lead:
-      'CRYSTAL UI designs, builds and improves websites and online stores — on Shopify, WordPress and custom React front ends. You talk directly to the developer doing the work, backed by a small team of skilled developers.',
+      'CRYSTAL UI designs, builds and improves websites and online stores — on Shopify, WordPress and custom Angular, React front ends. You talk directly to the developer doing the work, backed by a small team of skilled developers.',
     primaryCta: 'Discuss your project',
     secondaryCta: 'Explore our work',
     trust: 'Developer-led. Built with care. Supported by a skilled team.',
@@ -117,11 +117,11 @@ export const seo = {
     description: 'An independent web developer leading a small team of skilled developers. How CRYSTAL UI works with clients.',
     path: '/about',
   },
-  testimonials: {
-    title: 'Client feedback | CRYSTAL UI',
-    description: 'What clients say about working with CRYSTAL UI.',
-    path: '/testimonials',
-  },
+  // testimonials: {
+  //   title: 'Client feedback | CRYSTAL UI',
+  //   description: 'What clients say about working with CRYSTAL UI.',
+  //   path: '/testimonials',
+  // },
   contact: {
     title: 'Contact — Start a project | CRYSTAL UI',
     description: 'Tell CRYSTAL UI what you are building or what needs improving. Get a clear scope and estimate before work begins.',

@@ -57428,10 +57428,7 @@ const site = {
             label: 'About',
             to: '/about'
         },
-        {
-            label: 'Clients',
-            to: '/testimonials'
-        },
+        // { label: 'Clients', to: '/testimonials' },
         {
             label: 'Contact',
             to: '/contact'
@@ -57444,7 +57441,7 @@ const site = {
             'Thoughtfully',
             'engineered.'
         ],
-        lead: "CRYSTAL UI designs, builds and improves websites and online stores \u2014 on Shopify, WordPress and custom React front ends. You talk directly to the developer doing the work, backed by a small team of skilled developers.",
+        lead: "CRYSTAL UI designs, builds and improves websites and online stores \u2014 on Shopify, WordPress and custom Angular, React front ends. You talk directly to the developer doing the work, backed by a small team of skilled developers.",
         primaryCta: 'Discuss your project',
         secondaryCta: 'Explore our work',
         trust: 'Developer-led. Built with care. Supported by a skilled team.'
@@ -57583,11 +57580,11 @@ const seo = {
         description: 'An independent web developer leading a small team of skilled developers. How CRYSTAL UI works with clients.',
         path: '/about'
     },
-    testimonials: {
-        title: 'Client feedback | CRYSTAL UI',
-        description: 'What clients say about working with CRYSTAL UI.',
-        path: '/testimonials'
-    },
+    // testimonials: {
+    //   title: 'Client feedback | CRYSTAL UI',
+    //   description: 'What clients say about working with CRYSTAL UI.',
+    //   path: '/testimonials',
+    // },
     contact: {
         title: "Contact \u2014 Start a project | CRYSTAL UI",
         description: 'Tell CRYSTAL UI what you are building or what needs improving. Get a clear scope and estimate before work begins.',
@@ -58441,81 +58438,6 @@ function Home() {
                 lineNumber: 125,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-                className: "section",
-                "aria-labelledby": "clients-title",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "container",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "section-head",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _revealJsxDefault.default), {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            className: "eyebrow",
-                                            children: "Client feedback"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Home.jsx",
-                                            lineNumber: 148,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                            id: "clients-title",
-                                            className: "title",
-                                            children: "In their words."
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Home.jsx",
-                                            lineNumber: 149,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/pages/Home.jsx",
-                                    lineNumber: 147,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _revealJsxDefault.default), {
-                                    delay: 0.1,
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonJsxDefault.default), {
-                                        to: "/testimonials",
-                                        variant: "outline",
-                                        size: "sm",
-                                        children: "More feedback"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Home.jsx",
-                                        lineNumber: 151,
-                                        columnNumber: 33
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "src/pages/Home.jsx",
-                                    lineNumber: 151,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/pages/Home.jsx",
-                            lineNumber: 146,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _quoteListJsxDefault.default), {
-                            items: (0, _testimonialsJs.testimonials).slice(0, 2)
-                        }, void 0, false, {
-                            fileName: "src/pages/Home.jsx",
-                            lineNumber: 153,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/pages/Home.jsx",
-                    lineNumber: 145,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "src/pages/Home.jsx",
-                lineNumber: 144,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ctaBandJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Home.jsx",
                 lineNumber: 157,
@@ -58912,6 +58834,12 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "projects", ()=>projects);
 parcelHelpers.export(exports, "isPlaceholder", ()=>isPlaceholder);
+var _buyHiPng = require("url:../assets/projects/buyHi.png");
+var _buyHiPngDefault = parcelHelpers.interopDefault(_buyHiPng);
+var _mhwLtdPng = require("url:../assets/projects/mhwLtd.png");
+var _mhwLtdPngDefault = parcelHelpers.interopDefault(_mhwLtdPng);
+var _pureInstinctPng = require("url:../assets/projects/pureInstinct.png");
+var _pureInstinctPngDefault = parcelHelpers.interopDefault(_pureInstinctPng);
 const projects = [
     {
         slug: 'buyhi',
@@ -58939,7 +58867,7 @@ const projects = [
             accent: '#9FE870',
             ground: '#163D2A'
         },
-        image: 'https://github-production-user-asset-6210df.s3.amazonaws.com/14568229/676820805-87ccefd4-4a5a-4eda-bfdb-a08bed0b3ae0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261017T184650Z&X-Amz-Expires=300&X-Amz-Signature=b4cceeb00cddc4ab3d870ac63e29b942c3c47b0ceb9ec302ac7f2ca9405db1b7&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng'
+        image: (0, _buyHiPngDefault.default)
     },
     {
         slug: 'mhw-ltd',
@@ -58948,7 +58876,7 @@ const projects = [
         url: 'https://www.mhwltd.com/',
         industry: "Beverage alcohol \u2014 importing, wholesale and back-office services",
         type: 'Corporate website with client resources',
-        platform: '[To confirm]',
+        platform: 'WordPress',
         summary: 'A content-rich corporate website for a US and EU beverage alcohol importer and wholesaler.',
         context: 'MHW is a beverage alcohol importer, wholesaler and back-office service provider for the US and EU. The website explains its services, company and insights, and links clients and customers to portals and order tools.',
         challenge: "[To confirm] Describe the brief \u2014 for example, organising a large amount of service, client and resource content.",
@@ -58964,7 +58892,7 @@ const projects = [
             accent: '#C9F5AE',
             ground: '#17231D'
         },
-        image: null
+        image: (0, _mhwLtdPngDefault.default)
     },
     {
         slug: 'pure-instinct',
@@ -58992,12 +58920,21 @@ const projects = [
             accent: '#9FE870',
             ground: '#F8F9F5'
         },
-        image: null
+        image: (0, _pureInstinctPngDefault.default)
     }
 ];
 const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"l5WTQ":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX"}],"cAnmP":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
+
+},{}],"6rQ1L":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("mhwLtd.9cd1b52f.png") + "?" + Date.now();
+
+},{}],"g70YX":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("pureInstinct.3ee211d9.png") + "?" + Date.now();
+
+},{}],"l5WTQ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f103 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$f103.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -60213,23 +60150,6 @@ function Work() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "container",
-                style: {
-                    paddingBottom: 32
-                },
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _demoBadgeJsxDefault.default), {
-                    children: "Project details need your approval"
-                }, void 0, false, {
-                    fileName: "src/pages/Work.jsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "src/pages/Work.jsx",
-                lineNumber: 19,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "work-stack",
                 children: (0, _projectsJs.projects).map((p, i)=>{
                     const tone = [
@@ -60247,28 +60167,28 @@ function Work() {
                                 index: i
                             }, void 0, false, {
                                 fileName: "src/pages/Work.jsx",
-                                lineNumber: 27,
+                                lineNumber: 24,
                                 columnNumber: 42
                             }, this)
                         }, void 0, false, {
                             fileName: "src/pages/Work.jsx",
-                            lineNumber: 27,
+                            lineNumber: 24,
                             columnNumber: 15
                         }, this)
                     }, p.slug, false, {
                         fileName: "src/pages/Work.jsx",
-                        lineNumber: 26,
+                        lineNumber: 23,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/pages/Work.jsx",
-                lineNumber: 22,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ctaBandJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Work.jsx",
-                lineNumber: 32,
+                lineNumber: 29,
                 columnNumber: 7
             }, this)
         ]
