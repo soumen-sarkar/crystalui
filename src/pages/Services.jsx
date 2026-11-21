@@ -19,7 +19,6 @@ export default function Services() {
       />
       <section className="section" style={{ paddingTop: 0 }} aria-label="Services">
         <div className="container">
-          <p style={{ marginBottom: 24 }}><DemoBadge>Service list and delivery labels need your approval</DemoBadge></p>
           <ServiceList />
         </div>
       </section>
