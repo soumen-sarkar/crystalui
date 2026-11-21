@@ -59877,30 +59877,12 @@ function Services() {
                 "aria-label": "Services",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "container",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            style: {
-                                marginBottom: 24
-                            },
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _demoBadgeJsxDefault.default), {
-                                children: "Service list and delivery labels need your approval"
-                            }, void 0, false, {
-                                fileName: "src/pages/Services.jsx",
-                                lineNumber: 22,
-                                columnNumber: 43
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/pages/Services.jsx",
-                            lineNumber: 22,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _serviceListJsxDefault.default), {}, void 0, false, {
-                            fileName: "src/pages/Services.jsx",
-                            lineNumber: 23,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _serviceListJsxDefault.default), {}, void 0, false, {
+                        fileName: "src/pages/Services.jsx",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
                     fileName: "src/pages/Services.jsx",
                     lineNumber: 21,
                     columnNumber: 9
@@ -59923,7 +59905,7 @@ function Services() {
                                     children: "Process"
                                 }, void 0, false, {
                                     fileName: "src/pages/Services.jsx",
-                                    lineNumber: 29,
+                                    lineNumber: 28,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -59936,41 +59918,41 @@ function Services() {
                                         "A clear path from",
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                             fileName: "src/pages/Services.jsx",
-                                            lineNumber: 31,
+                                            lineNumber: 30,
                                             columnNumber: 32
                                         }, this),
                                         "first call to launch."
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Services.jsx",
-                                    lineNumber: 30,
+                                    lineNumber: 29,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/Services.jsx",
-                            lineNumber: 28,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _processJsxDefault.default), {}, void 0, false, {
                             fileName: "src/pages/Services.jsx",
-                            lineNumber: 34,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/pages/Services.jsx",
-                    lineNumber: 27,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/pages/Services.jsx",
-                lineNumber: 26,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ctaBandJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Services.jsx",
-                lineNumber: 37,
+                lineNumber: 36,
                 columnNumber: 7
             }, this)
         ]
