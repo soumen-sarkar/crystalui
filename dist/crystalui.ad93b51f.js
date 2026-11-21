@@ -58834,7 +58834,7 @@ var _pureInstinctPngDefault = parcelHelpers.interopDefault(_pureInstinctPng);
 const projects = [
     {
         slug: 'buyhi',
-        name: 'BuyHi',
+        name: 'Human Improvement',
         brand: 'Human Improvement',
         url: 'https://buyhi.co/',
         industry: "Health & wellness \u2014 dietary supplements",
