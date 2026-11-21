@@ -41,7 +41,6 @@ export default function CaseStudy() {
           <p className="lead muted" style={{ marginTop: 24 }}>{p.summary}</p>
           <div style={{ marginTop: 32, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
             <Button href={p.url} variant="dark">View project</Button>
-            <DemoBadge>Draft — details need your approval</DemoBadge>
           </div>
           <dl className="case__facts">
             <div><dt>Client / industry</dt><dd>{p.industry}</dd></div>

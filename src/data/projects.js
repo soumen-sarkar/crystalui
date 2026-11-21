@@ -22,12 +22,12 @@ export const projects = [
     summary: 'A Shopify storefront for a supplement brand selling single products, bundles and accessories.',
     context:
       'Human Improvement (buyhi.co) is a supplement brand selling products such as MSM and creatine, plus protein powders, shakers and bundles. The storefront combines a clear hero, benefit highlights, customer reviews and product collections.',
-    challenge: '[To confirm] Describe the brief the client came with — for example, what needed building or improving on the storefront.',
-    role: '[To confirm] Describe your specific contribution and where team members supported delivery. Delivered through a development collaboration; CRYSTAL UI does not own the brand.',
-    implementation: '[To confirm] Describe the theme or storefront work you implemented.',
-    uiDecisions: '[To confirm] Describe the key UI/UX decisions — product pages, navigation, mobile behaviour, and so on.',
+    challenge: 'Create a dedicated, conversion-focused landing page for the MSM Cellular Detox product while maintaining the existing product detail page experience.',
+    role: 'Led end-to-end frontend development, translating Figma designs into responsive Shopify sections and integrating product functionality.',
+    implementation: 'Built reusable custom Shopify sections, dynamic variant and bundle pricing, subscription integration, sticky add-to-cart functionality, and interactive content modules.',
+    uiDecisions: 'Prioritized mobile responsiveness, clear product messaging, intuitive bundle selection, horizontal scrolling sections, and consistent CTA placement.',
     outcomes: [], // Add only verified outcomes, e.g. 'Reduced theme JavaScript by X%' — leave empty otherwise.
-    tech: ['Shopify', '[To confirm] Liquid', '[To confirm] JavaScript', '[To confirm] SCSS'],
+    tech: ['Shopify Liquid', 'Shopify Metafields', 'JavaScript', 'HTML5', 'SCSS', 'Recharge', 'Figma'],
     visual: { variant: 'a', accent: '#9FE870', ground: '#163D2A' },
     image: buyhiImg,
   },
