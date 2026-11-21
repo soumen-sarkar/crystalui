@@ -58873,13 +58873,20 @@ const projects = [
         platform: 'WordPress',
         summary: 'A content-rich corporate website for a US and EU beverage alcohol importer and wholesaler.',
         context: 'MHW is a beverage alcohol importer, wholesaler and back-office service provider for the US and EU. The website explains its services, company and insights, and links clients and customers to portals and order tools.',
-        challenge: "[To confirm] Describe the brief \u2014 for example, organising a large amount of service, client and resource content.",
-        role: '[To confirm] Describe your specific contribution and where team members supported delivery. Delivered through a development collaboration; CRYSTAL UI does not own the brand.',
-        implementation: "[To confirm] Describe the build \u2014 platform, templates, components and integrations.",
-        uiDecisions: "[To confirm] Describe the key UI/UX decisions \u2014 navigation structure, content hierarchy, responsive behaviour.",
+        challenge: 'Maintaining and improving the MHW WordPress website while ensuring plugin compatibility, security, performance, and consistent functionality across staging and production environments.',
+        role: 'Led WordPress maintenance, troubleshooting, environment updates, mega menu improvements, and performance optimization.',
+        implementation: 'Updated WordPress core, PHP, and plugins; resolved widget and Gutenberg reusable block issues; debugged desktop navigation; and managed WP Rocket licensing and caching configurations.',
+        uiDecisions: 'Improved desktop mega menu accessibility and navigation consistency while preserving mobile functionality and responsive layouts.',
         outcomes: [],
         tech: [
-            '[To confirm]'
+            'WordPress',
+            'PHP',
+            'JavaScript',
+            'Gutenberg',
+            'WP Engine',
+            'WP Rocket',
+            'HTML5',
+            'CSS3'
         ],
         visual: {
             variant: 'b',
