@@ -35,7 +35,6 @@ export default function Footer() {
         </div>
         <div className="footer__bottom">
           <span>© {new Date().getFullYear()} CRYSTAL UI. All rights reserved.</span>
-          <span>Built with React.</span>
         </div>
       </div>
     </footer>

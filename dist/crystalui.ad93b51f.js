@@ -57817,27 +57817,18 @@ function Footer() {
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "footer__bottom",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: [
-                                "\xa9 ",
-                                new Date().getFullYear(),
-                                " CRYSTAL UI. All rights reserved."
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/layout/Footer.jsx",
-                            lineNumber: 37,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: "Built with React."
-                        }, void 0, false, {
-                            fileName: "src/components/layout/Footer.jsx",
-                            lineNumber: 38,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            "\xa9 ",
+                            new Date().getFullYear(),
+                            " CRYSTAL UI. All rights reserved."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/layout/Footer.jsx",
+                        lineNumber: 37,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
                     fileName: "src/components/layout/Footer.jsx",
                     lineNumber: 36,
                     columnNumber: 9
@@ -58925,7 +58916,7 @@ const projects = [
 ];
 const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX"}],"cAnmP":[function(require,module,exports,__globalThis) {
+},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"cAnmP":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
 
 },{}],"6rQ1L":[function(require,module,exports,__globalThis) {

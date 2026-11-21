@@ -345,7 +345,7 @@
   color: #ffffffa3;
   border-top: 1px solid #ffffff24;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px 24px;
   margin-top: 56px;
   padding-top: 24px;
