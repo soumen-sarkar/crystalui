@@ -58842,16 +58842,19 @@ const projects = [
         platform: 'Shopify',
         summary: 'A Shopify storefront for a supplement brand selling single products, bundles and accessories.',
         context: 'Human Improvement (buyhi.co) is a supplement brand selling products such as MSM and creatine, plus protein powders, shakers and bundles. The storefront combines a clear hero, benefit highlights, customer reviews and product collections.',
-        challenge: "[To confirm] Describe the brief the client came with \u2014 for example, what needed building or improving on the storefront.",
-        role: '[To confirm] Describe your specific contribution and where team members supported delivery. Delivered through a development collaboration; CRYSTAL UI does not own the brand.',
-        implementation: '[To confirm] Describe the theme or storefront work you implemented.',
-        uiDecisions: "[To confirm] Describe the key UI/UX decisions \u2014 product pages, navigation, mobile behaviour, and so on.",
+        challenge: 'Create a dedicated, conversion-focused landing page for the MSM Cellular Detox product while maintaining the existing product detail page experience.',
+        role: 'Led end-to-end frontend development, translating Figma designs into responsive Shopify sections and integrating product functionality.',
+        implementation: 'Built reusable custom Shopify sections, dynamic variant and bundle pricing, subscription integration, sticky add-to-cart functionality, and interactive content modules.',
+        uiDecisions: 'Prioritized mobile responsiveness, clear product messaging, intuitive bundle selection, horizontal scrolling sections, and consistent CTA placement.',
         outcomes: [],
         tech: [
-            'Shopify',
-            '[To confirm] Liquid',
-            '[To confirm] JavaScript',
-            '[To confirm] SCSS'
+            'Shopify Liquid',
+            'Shopify Metafields',
+            'JavaScript',
+            'HTML5',
+            'SCSS',
+            'Recharge',
+            'Figma'
         ],
         visual: {
             variant: 'a',
@@ -58870,13 +58873,20 @@ const projects = [
         platform: 'WordPress',
         summary: 'A content-rich corporate website for a US and EU beverage alcohol importer and wholesaler.',
         context: 'MHW is a beverage alcohol importer, wholesaler and back-office service provider for the US and EU. The website explains its services, company and insights, and links clients and customers to portals and order tools.',
-        challenge: "[To confirm] Describe the brief \u2014 for example, organising a large amount of service, client and resource content.",
-        role: '[To confirm] Describe your specific contribution and where team members supported delivery. Delivered through a development collaboration; CRYSTAL UI does not own the brand.',
-        implementation: "[To confirm] Describe the build \u2014 platform, templates, components and integrations.",
-        uiDecisions: "[To confirm] Describe the key UI/UX decisions \u2014 navigation structure, content hierarchy, responsive behaviour.",
+        challenge: 'Maintaining and improving the MHW WordPress website while ensuring plugin compatibility, security, performance, and consistent functionality across staging and production environments.',
+        role: 'Led WordPress maintenance, troubleshooting, environment updates, mega menu improvements, and performance optimization.',
+        implementation: 'Updated WordPress core, PHP, and plugins; resolved widget and Gutenberg reusable block issues; debugged desktop navigation; and managed WP Rocket licensing and caching configurations.',
+        uiDecisions: 'Improved desktop mega menu accessibility and navigation consistency while preserving mobile functionality and responsive layouts.',
         outcomes: [],
         tech: [
-            '[To confirm]'
+            'WordPress',
+            'PHP',
+            'JavaScript',
+            'Gutenberg',
+            'WP Engine',
+            'WP Rocket',
+            'HTML5',
+            'CSS3'
         ],
         visual: {
             variant: 'b',
@@ -58895,16 +58905,20 @@ const projects = [
         platform: 'Shopify',
         summary: 'A Shopify storefront for a fragrance brand with a broad catalogue of perfume oils, sprays and mists.',
         context: 'Pure Instinct (pureinstinct.co) is an online retailer of pheromone-infused fragrances, with collections including perfume oils, sprays and hair and body mists, press mentions and customer stories.',
-        challenge: '[To confirm] Describe the brief the client came with.',
-        role: '[To confirm] Describe your specific contribution and where team members supported delivery. Delivered through a development collaboration; CRYSTAL UI does not own the brand.',
-        implementation: '[To confirm] Describe the theme or storefront work you implemented.',
-        uiDecisions: "[To confirm] Describe the key UI/UX decisions \u2014 collection browsing, product pages, mobile experience.",
+        challenge: 'Improve the Shopify product review testimonial experience by ensuring that featured Key Reviews reflect genuinely positive customer feedback rather than relying solely on star ratings.',
+        role: 'Handled the investigation, identified the review-selection issue, and proposed improvements to the existing Judge.me integration.',
+        implementation: 'Enhanced the review-selection logic to evaluate both star ratings and review text, filtering out clearly negative feedback before displaying testimonials.',
+        uiDecisions: 'Prioritized relevant, trustworthy customer testimonials to improve product credibility and customer confidence.',
         outcomes: [],
         tech: [
-            'Shopify',
-            '[To confirm] Liquid',
-            '[To confirm] JavaScript',
-            '[To confirm] SCSS'
+            'Shopify Liquid',
+            'Shopify Metafields',
+            'JavaScript',
+            'HTML5',
+            'CSS3',
+            'Judge.me',
+            'API/Metafields',
+            'DOM Manipulation'
         ],
         visual: {
             variant: 'c',
@@ -60316,25 +60330,16 @@ function CaseStudy() {
                                 flexWrap: 'wrap',
                                 alignItems: 'center'
                             },
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonJsxDefault.default), {
-                                    href: p.url,
-                                    variant: "dark",
-                                    children: "View project"
-                                }, void 0, false, {
-                                    fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 43,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _demoBadgeJsxDefault.default), {
-                                    children: "Draft \u2014 details need your approval"
-                                }, void 0, false, {
-                                    fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 44,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonJsxDefault.default), {
+                                href: p.url,
+                                variant: "dark",
+                                children: "View project"
+                            }, void 0, false, {
+                                fileName: "src/pages/CaseStudy.jsx",
+                                lineNumber: 43,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
                             fileName: "src/pages/CaseStudy.jsx",
                             lineNumber: 42,
                             columnNumber: 11
@@ -60348,15 +60353,37 @@ function CaseStudy() {
                                             children: "Client / industry"
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 47,
+                                            lineNumber: 46,
                                             columnNumber: 18
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dd", {
                                             children: p.industry
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 47,
+                                            lineNumber: 46,
                                             columnNumber: 44
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/CaseStudy.jsx",
+                                    lineNumber: 46,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dt", {
+                                            children: "Project type"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/CaseStudy.jsx",
+                                            lineNumber: 47,
+                                            columnNumber: 18
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dd", {
+                                            children: p.type
+                                        }, void 0, false, {
+                                            fileName: "src/pages/CaseStudy.jsx",
+                                            lineNumber: 47,
+                                            columnNumber: 39
                                         }, this)
                                     ]
                                 }, void 0, true, {
@@ -60367,18 +60394,24 @@ function CaseStudy() {
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dt", {
-                                            children: "Project type"
+                                            children: "Platform"
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
                                             lineNumber: 48,
                                             columnNumber: 18
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dd", {
-                                            children: p.type
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderTextJsxDefault.default), {
+                                                text: p.platform
+                                            }, void 0, false, {
+                                                fileName: "src/pages/CaseStudy.jsx",
+                                                lineNumber: 48,
+                                                columnNumber: 39
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
                                             lineNumber: 48,
-                                            columnNumber: 39
+                                            columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
@@ -60389,38 +60422,10 @@ function CaseStudy() {
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dt", {
-                                            children: "Platform"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 49,
-                                            columnNumber: 18
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dd", {
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderTextJsxDefault.default), {
-                                                text: p.platform
-                                            }, void 0, false, {
-                                                fileName: "src/pages/CaseStudy.jsx",
-                                                lineNumber: 49,
-                                                columnNumber: 39
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 49,
-                                            columnNumber: 35
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 49,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dt", {
                                             children: "Live site"
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 50,
+                                            lineNumber: 49,
                                             columnNumber: 18
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dd", {
@@ -60435,30 +60440,30 @@ function CaseStudy() {
                                                         children: " (opens in a new tab)"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/CaseStudy.jsx",
-                                                        lineNumber: 50,
+                                                        lineNumber: 49,
                                                         columnNumber: 152
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/CaseStudy.jsx",
-                                                lineNumber: 50,
+                                                lineNumber: 49,
                                                 columnNumber: 40
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 50,
+                                            lineNumber: 49,
                                             columnNumber: 36
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 50,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/CaseStudy.jsx",
-                            lineNumber: 46,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)
                     ]
@@ -60481,17 +60486,17 @@ function CaseStudy() {
                         loading: "eager"
                     }, void 0, false, {
                         fileName: "src/pages/CaseStudy.jsx",
-                        lineNumber: 56,
+                        lineNumber: 55,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "src/pages/CaseStudy.jsx",
-                    lineNumber: 56,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/pages/CaseStudy.jsx",
-                lineNumber: 55,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -60507,7 +60512,7 @@ function CaseStudy() {
                                         children: heading
                                     }, void 0, false, {
                                         fileName: "src/pages/CaseStudy.jsx",
-                                        lineNumber: 63,
+                                        lineNumber: 62,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -60515,18 +60520,18 @@ function CaseStudy() {
                                             text: text
                                         }, void 0, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 64,
+                                            lineNumber: 63,
                                             columnNumber: 18
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/pages/CaseStudy.jsx",
-                                        lineNumber: 64,
+                                        lineNumber: 63,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, heading, true, {
                                 fileName: "src/pages/CaseStudy.jsx",
-                                lineNumber: 62,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, this)),
                         p.outcomes.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _revealJsxDefault.default), {
@@ -60536,7 +60541,7 @@ function CaseStudy() {
                                     children: "Verified outcomes"
                                 }, void 0, false, {
                                     fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 69,
+                                    lineNumber: 68,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -60548,18 +60553,18 @@ function CaseStudy() {
                                             children: o
                                         }, o, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 71,
+                                            lineNumber: 70,
                                             columnNumber: 40
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 70,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/CaseStudy.jsx",
-                            lineNumber: 68,
+                            lineNumber: 67,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _revealJsxDefault.default), {
@@ -60569,7 +60574,7 @@ function CaseStudy() {
                                     children: "Technologies"
                                 }, void 0, false, {
                                     fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 76,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -60580,34 +60585,34 @@ function CaseStudy() {
                                                 text: t
                                             }, void 0, false, {
                                                 fileName: "src/pages/CaseStudy.jsx",
-                                                lineNumber: 78,
+                                                lineNumber: 77,
                                                 columnNumber: 63
                                             }, this)
                                         }, t, false, {
                                             fileName: "src/pages/CaseStudy.jsx",
-                                            lineNumber: 78,
+                                            lineNumber: 77,
                                             columnNumber: 34
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "src/pages/CaseStudy.jsx",
-                                    lineNumber: 77,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/CaseStudy.jsx",
-                            lineNumber: 75,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/pages/CaseStudy.jsx",
-                    lineNumber: 60,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/pages/CaseStudy.jsx",
-                lineNumber: 59,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -60624,7 +60629,7 @@ function CaseStudy() {
                                 children: "Next project"
                             }, void 0, false, {
                                 fileName: "src/pages/CaseStudy.jsx",
-                                lineNumber: 87,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -60632,28 +60637,28 @@ function CaseStudy() {
                                 children: next.name
                             }, void 0, false, {
                                 fileName: "src/pages/CaseStudy.jsx",
-                                lineNumber: 88,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/CaseStudy.jsx",
-                        lineNumber: 86,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "src/pages/CaseStudy.jsx",
-                    lineNumber: 85,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/pages/CaseStudy.jsx",
-                lineNumber: 84,
+                lineNumber: 83,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ctaBandJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/CaseStudy.jsx",
-                lineNumber: 92,
+                lineNumber: 91,
                 columnNumber: 7
             }, this)
         ]
