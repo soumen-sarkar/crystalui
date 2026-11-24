@@ -7,7 +7,7 @@ export default function QuoteList({ items }) {
     <div className="quotes">
       {items.map((t, i) => (
         <Reveal as="figure" key={t.id} className={`quote${i === 0 ? ' quote--large' : ''}`} delay={i * 0.08}>
-          {t.demo && <div className="quote__demo"><DemoBadge>Demo testimonial — replace before launch</DemoBadge></div>}
+          {/* {t.demo && <div className="quote__demo"><DemoBadge>Demo testimonial — replace before launch</DemoBadge></div>} */}
           <span className="quote__mark" aria-hidden="true">“</span>
           <blockquote style={{ margin: 0 }}>
             <p className="quote__text">{t.quote}</p>

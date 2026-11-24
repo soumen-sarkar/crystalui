@@ -27,7 +27,7 @@ export const site = {
     { label: 'Services', to: '/services' },
     { label: 'Work', to: '/work' },
     { label: 'About', to: '/about' },
-    // { label: 'Clients', to: '/testimonials' },
+    { label: 'Clients', to: '/testimonials' },
     { label: 'Contact', to: '/contact' },
   ],
 

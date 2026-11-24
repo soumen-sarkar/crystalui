@@ -57428,7 +57428,10 @@ const site = {
             label: 'About',
             to: '/about'
         },
-        // { label: 'Clients', to: '/testimonials' },
+        {
+            label: 'Clients',
+            to: '/testimonials'
+        },
         {
             label: 'Contact',
             to: '/contact'
@@ -58427,6 +58430,81 @@ function Home() {
             }, void 0, false, {
                 fileName: "src/pages/Home.jsx",
                 lineNumber: 125,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "section",
+                "aria-labelledby": "clients-title",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "container",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "section-head",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _revealJsxDefault.default), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "eyebrow",
+                                            children: "Client feedback"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Home.jsx",
+                                            lineNumber: 148,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            id: "clients-title",
+                                            className: "title",
+                                            children: "In their words."
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Home.jsx",
+                                            lineNumber: 149,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 147,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _revealJsxDefault.default), {
+                                    delay: 0.1,
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonJsxDefault.default), {
+                                        to: "/testimonials",
+                                        variant: "outline",
+                                        size: "sm",
+                                        children: "More feedback"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Home.jsx",
+                                        lineNumber: 151,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 151,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/pages/Home.jsx",
+                            lineNumber: 146,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _quoteListJsxDefault.default), {
+                            items: (0, _testimonialsJs.testimonials).slice(0, 2)
+                        }, void 0, false, {
+                            fileName: "src/pages/Home.jsx",
+                            lineNumber: 153,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 145,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Home.jsx",
+                lineNumber: 144,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ctaBandJsxDefault.default), {}, void 0, false, {
@@ -59560,20 +59638,6 @@ function QuoteList({ items }) {
                 className: `quote${i === 0 ? ' quote--large' : ''}`,
                 delay: i * 0.08,
                 children: [
-                    t.demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "quote__demo",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _demoBadgeJsxDefault.default), {
-                            children: "Demo testimonial \u2014 replace before launch"
-                        }, void 0, false, {
-                            fileName: "src/components/sections/QuoteList.jsx",
-                            lineNumber: 10,
-                            columnNumber: 51
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/sections/QuoteList.jsx",
-                        lineNumber: 10,
-                        columnNumber: 22
-                    }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "quote__mark",
                         "aria-hidden": "true",
@@ -59802,32 +59866,32 @@ const testimonials = [
     {
         id: 't1',
         demo: true,
-        quote: "Demo testimonial: the quote goes here, in the client\u2019s exact words. It can run to a few sentences about communication, quality of work and how the project went.",
-        name: 'Client Name',
-        title: 'Job Title',
-        company: 'Company',
-        context: 'Project or engagement context (if confirmed)',
-        project: 'buyhi'
+        quote: 'We really enjoyed working with Soumen. He was quick to get back to us, quick to get work done, and very easy to communicate with. He was flexible when revisions came back outside of the original scope and we are overall very happy with landing page he developed for us.',
+        name: 'Jason Brown',
+        title: 'Co-Founder & COO',
+        company: '(Human Improvement)',
+        context: null,
+        project: null
     },
     {
         id: 't2',
         demo: true,
-        quote: 'Demo testimonial: a shorter quote works well too.',
-        name: 'Client Name',
-        title: 'Job Title',
-        company: 'Company',
-        context: '',
+        quote: 'Soumen has been a reliable partner throughout our projects. His technical expertise, attention to detail, and commitment to delivering quality work have made a real difference. I appreciate his ability to turn ideas into practical solutions.',
+        name: 'Jenn Sales',
+        title: 'COO',
+        company: '(Entreprenista)',
+        context: null,
         project: null
     },
     {
         id: 't3',
         demo: true,
-        quote: 'Demo testimonial: a third quote, used to check how the editorial layout handles quotes of different lengths without relying on a carousel.',
-        name: 'Client Name',
-        title: 'Job Title',
-        company: 'Company',
-        context: 'Project or engagement context (if confirmed)',
-        project: 'pure-instinct'
+        quote: "I have worked with Soumen across a multitude of projects and recommended Soumen to dozens of people. He has always communicated well and delivered projects with high-quality code. To this day, I still continue to work with Soumen and can't recommend him enough!",
+        name: 'Hemant Varshney',
+        title: 'Founder & CEO',
+        company: '(Digital Commerce Corporation | NY, US)',
+        context: '',
+        project: null
     }
 ];
 

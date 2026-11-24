@@ -141,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="section" aria-labelledby="clients-title">
+      <section className="section" aria-labelledby="clients-title">
         <div className="container">
           <div className="section-head">
             <Reveal>
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
           <QuoteList items={testimonials.slice(0, 2)} />
         </div>
-      </section> */}
+      </section>
 
       <CtaBand />
     </>
