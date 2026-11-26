@@ -1,0 +1,85 @@
+@use './tokens' as *;
+
+// Let the marquee column shrink instead of stretching the Trust strip grid.
+.trust__inner {
+  @include up($bp-lg) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+}
+
+// Client logo marquee ------------------------------------------------------
+.marquee {
+  overflow: hidden;
+  min-width: 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 28s linear infinite;
+  }
+
+  &:hover &__track,
+  &:focus-within &__track {
+    animation-play-state: paused;
+  }
+
+  &__half {
+    --mq-gap: clamp(40px, 5vw, 72px);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--mq-gap);
+    padding-right: var(--mq-gap); // keeps spacing even where the two halves meet
+  }
+
+  &__item {
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    color: var(--ink);
+    opacity: 0.75;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      height: 36px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+
+    &__track {
+      animation: none;
+      width: auto;
+    }
+    &__half {
+      flex-wrap: wrap;
+      padding-right: 0;
+    }
+    &__half[aria-hidden='true'],
+    &__item[aria-hidden='true'] {
+      display: none;
+    }
+  }
+}

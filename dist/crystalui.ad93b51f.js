@@ -58822,8 +58822,8 @@ parcelHelpers.export(exports, "default", ()=>TrustStrip);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _projectsJs = require("../../data/projects.js");
+var _clientMarqueeJsx = require("./ClientMarquee.jsx");
+var _clientMarqueeJsxDefault = parcelHelpers.interopDefault(_clientMarqueeJsx);
 var _siteContentJs = require("../../data/siteContent.js");
 function TrustStrip() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -58837,22 +58837,12 @@ function TrustStrip() {
                     children: (0, _siteContentJs.site).trust.heading
                 }, void 0, false, {
                     fileName: "src/components/sections/TrustStrip.jsx",
-                    lineNumber: 10,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "trust__names",
-                    children: (0, _projectsJs.projects).map((p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: `/work/${p.slug}`,
-                            children: p.name
-                        }, p.slug, false, {
-                            fileName: "src/components/sections/TrustStrip.jsx",
-                            lineNumber: 13,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _clientMarqueeJsxDefault.default), {}, void 0, false, {
                     fileName: "src/components/sections/TrustStrip.jsx",
-                    lineNumber: 11,
+                    lineNumber: 10,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -58862,23 +58852,23 @@ function TrustStrip() {
                             children: t
                         }, t, false, {
                             fileName: "src/components/sections/TrustStrip.jsx",
-                            lineNumber: 17,
+                            lineNumber: 12,
                             columnNumber: 44
                         }, this))
                 }, void 0, false, {
                     fileName: "src/components/sections/TrustStrip.jsx",
-                    lineNumber: 16,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/sections/TrustStrip.jsx",
-            lineNumber: 9,
+            lineNumber: 8,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/sections/TrustStrip.jsx",
-        lineNumber: 8,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }
@@ -58891,271 +58881,186 @@ $RefreshReg$(_c, "TrustStrip");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-router-dom":"fKeYf","../../data/projects.js":"ghvQ2","../../data/siteContent.js":"lRWxy","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"ghvQ2":[function(require,module,exports,__globalThis) {
-// Featured work. Facts in `context`, `industry` and `platform` come from each project's public website.
-// Anything starting with "[To confirm]" is a placeholder for YOUR details and is highlighted on the page.
-// ⚠ NEEDS YOUR APPROVAL: permission to show each project, your exact contribution, and any outcomes.
-// Do not add results or screenshots unless they are real and you are permitted to publish them.
-//
-// To add a real screenshot: put the file in src/assets/ and set  image: new URL('../assets/file.webp', import.meta.url)
-// (or import it) — the placeholder composition is replaced automatically.
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../data/siteContent.js":"lRWxy","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./ClientMarquee.jsx":"b8aLI"}],"b8aLI":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1ed4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1ed4.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1ed4.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "projects", ()=>projects);
-parcelHelpers.export(exports, "isPlaceholder", ()=>isPlaceholder);
-var _buyHiPng = require("url:../assets/projects/buyHi.png");
-var _buyHiPngDefault = parcelHelpers.interopDefault(_buyHiPng);
-var _mhwLtdPng = require("url:../assets/projects/mhwLtd.png");
-var _mhwLtdPngDefault = parcelHelpers.interopDefault(_mhwLtdPng);
-var _pureInstinctPng = require("url:../assets/projects/pureInstinct.png");
-var _pureInstinctPngDefault = parcelHelpers.interopDefault(_pureInstinctPng);
-var _trylyClearPng = require("url:../assets/projects/trylyClear.png");
-var _trylyClearPngDefault = parcelHelpers.interopDefault(_trylyClearPng);
-var _digiComPng = require("url:../assets/projects/digiCom.png");
+parcelHelpers.export(exports, "default", ()=>ClientMarquee);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _clientsJs = require("../../data/clients.js");
+// Each half of the loop needs enough items to be wider than the strip, otherwise a gap shows.
+const MIN_ITEMS = 8;
+const repeats = Math.max(1, Math.ceil(MIN_ITEMS / Math.max((0, _clientsJs.clients).length, 1)));
+function Half({ hidden = false }) {
+    const items = [];
+    for(let r = 0; r < repeats; r += 1)(0, _clientsJs.clients).forEach((c)=>{
+        // Only the very first copy is exposed to assistive tech; the rest are visual repeats.
+        const decorative = hidden || r > 0;
+        items.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+            className: "marquee__item",
+            "aria-hidden": decorative || undefined,
+            children: c.logo ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: c.logo,
+                alt: decorative ? '' : c.name,
+                height: "36",
+                loading: "lazy"
+            }, void 0, false, {
+                fileName: "src/components/sections/ClientMarquee.jsx",
+                lineNumber: 17,
+                columnNumber: 13
+            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                children: c.name
+            }, void 0, false, {
+                fileName: "src/components/sections/ClientMarquee.jsx",
+                lineNumber: 19,
+                columnNumber: 13
+            }, this)
+        }, `${r}-${c.name}`, false, {
+            fileName: "src/components/sections/ClientMarquee.jsx",
+            lineNumber: 15,
+            columnNumber: 9
+        }, this));
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: "marquee__half",
+        "aria-hidden": hidden || undefined,
+        children: items
+    }, void 0, false, {
+        fileName: "src/components/sections/ClientMarquee.jsx",
+        lineNumber: 25,
+        columnNumber: 10
+    }, this);
+}
+_c = Half;
+function ClientMarquee() {
+    if (!(0, _clientsJs.clients).length) return null;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "marquee",
+        role: "group",
+        "aria-label": "Clients and collaborations",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "marquee__track",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Half, {}, void 0, false, {
+                    fileName: "src/components/sections/ClientMarquee.jsx",
+                    lineNumber: 34,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Half, {
+                    hidden: true
+                }, void 0, false, {
+                    fileName: "src/components/sections/ClientMarquee.jsx",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/sections/ClientMarquee.jsx",
+            lineNumber: 33,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/sections/ClientMarquee.jsx",
+        lineNumber: 32,
+        columnNumber: 5
+    }, this);
+}
+_c1 = ClientMarquee;
+var _c, _c1;
+$RefreshReg$(_c, "Half");
+$RefreshReg$(_c1, "ClientMarquee");
+
+  $parcel$ReactRefreshHelpers$1ed4.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../data/clients.js":"ldZqf","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"ldZqf":[function(require,module,exports,__globalThis) {
+// Logos shown in the scrolling "Selected collaborations" strip on the home page.
+// Only add logos you are permitted to display.
+//
+// To use a logo:
+//   1. Save it in src/assets/clients/  (SVG or PNG with a transparent background, ideally wide-ish, e.g. buyhi.svg)
+//   2. Import it here with the `url:` prefix:
+//        import buyhiLogo from 'url:../assets/clients/buyhi.svg';
+//   3. Set  logo: buyhiLogo  on that client.
+// With  logo: null  the client's name is shown as text instead.
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "clients", ()=>clients);
+var _humanImprovementPng = require("url:../assets/clients/humanImprovement.png");
+var _humanImprovementPngDefault = parcelHelpers.interopDefault(_humanImprovementPng);
+var _mhwPng = require("url:../assets/clients/mhw.png");
+var _mhwPngDefault = parcelHelpers.interopDefault(_mhwPng);
+var _pureInstinctWebp = require("url:../assets/clients/pureInstinct.webp");
+var _pureInstinctWebpDefault = parcelHelpers.interopDefault(_pureInstinctWebp);
+var _trulyClearWebp = require("url:../assets/clients/trulyClear.webp");
+var _trulyClearWebpDefault = parcelHelpers.interopDefault(_trulyClearWebp);
+var _digiComPng = require("url:../assets/clients/digiCom.png");
 var _digiComPngDefault = parcelHelpers.interopDefault(_digiComPng);
-var _entreprenistaPng = require("url:../assets/projects/entreprenista.png");
+var _entreprenistaPng = require("url:../assets/clients/entreprenista.png");
 var _entreprenistaPngDefault = parcelHelpers.interopDefault(_entreprenistaPng);
-var _selectsoftwarereviewsPng = require("url:../assets/projects/selectsoftwarereviews.png");
-var _selectsoftwarereviewsPngDefault = parcelHelpers.interopDefault(_selectsoftwarereviewsPng);
-const projects = [
+var _ssrPng = require("url:../assets/clients/ssr.png");
+var _ssrPngDefault = parcelHelpers.interopDefault(_ssrPng);
+const clients = [
     {
-        slug: 'buyhi',
-        name: 'Human Improvement',
-        brand: 'Human Improvement',
-        url: 'https://buyhi.co/',
-        industry: "Health & wellness \u2014 dietary supplements",
-        type: 'E-commerce storefront',
-        platform: 'Shopify',
-        summary: 'A Shopify storefront for a supplement brand selling single products, bundles and accessories.',
-        context: 'Human Improvement (buyhi.co) is a supplement brand selling products such as MSM and creatine, plus protein powders, shakers and bundles. The storefront combines a clear hero, benefit highlights, customer reviews and product collections.',
-        challenge: 'Create a dedicated, conversion-focused landing page for the MSM Cellular Detox product while maintaining the existing product detail page experience.',
-        role: 'Led end-to-end frontend development, translating Figma designs into responsive Shopify sections and integrating product functionality.',
-        implementation: 'Built reusable custom Shopify sections, dynamic variant and bundle pricing, subscription integration, sticky add-to-cart functionality, and interactive content modules.',
-        uiDecisions: 'Prioritized mobile responsiveness, clear product messaging, intuitive bundle selection, horizontal scrolling sections, and consistent CTA placement.',
-        outcomes: [],
-        tech: [
-            'Shopify Liquid',
-            'Shopify Metafields',
-            'JavaScript',
-            'HTML5',
-            'SCSS',
-            'Recharge',
-            'Figma'
-        ],
-        visual: {
-            variant: 'a',
-            accent: '#9FE870',
-            ground: '#163D2A'
-        },
-        image: (0, _buyHiPngDefault.default)
+        name: 'BuyHi',
+        logo: (0, _humanImprovementPngDefault.default)
     },
     {
-        slug: 'mhw-ltd',
         name: 'MHW Ltd',
-        brand: 'MHW',
-        url: 'https://www.mhwltd.com/',
-        industry: "Beverage alcohol \u2014 importing, wholesale and back-office services",
-        type: 'Corporate website with client resources',
-        platform: 'WordPress',
-        summary: 'A content-rich corporate website for a US and EU beverage alcohol importer and wholesaler.',
-        context: 'MHW is a beverage alcohol importer, wholesaler and back-office service provider for the US and EU. The website explains its services, company and insights, and links clients and customers to portals and order tools.',
-        challenge: 'Maintaining and improving the MHW WordPress website while ensuring plugin compatibility, security, performance, and consistent functionality across staging and production environments.',
-        role: 'Led WordPress maintenance, troubleshooting, environment updates, mega menu improvements, and performance optimization.',
-        implementation: 'Updated WordPress core, PHP, and plugins; resolved widget and Gutenberg reusable block issues; debugged desktop navigation; and managed WP Rocket licensing and caching configurations.',
-        uiDecisions: 'Improved desktop mega menu accessibility and navigation consistency while preserving mobile functionality and responsive layouts.',
-        outcomes: [],
-        tech: [
-            'WordPress',
-            'PHP',
-            'JavaScript',
-            'Gutenberg',
-            'WP Engine',
-            'WP Rocket',
-            'HTML5',
-            'CSS3'
-        ],
-        visual: {
-            variant: 'b',
-            accent: '#C9F5AE',
-            ground: '#17231D'
-        },
-        image: (0, _mhwLtdPngDefault.default)
+        logo: (0, _mhwPngDefault.default)
     },
     {
-        slug: 'pure-instinct',
         name: 'Pure Instinct',
-        brand: 'Pure Instinct',
-        url: 'https://pureinstinct.co/',
-        industry: "Beauty \u2014 pheromone fragrances",
-        type: 'E-commerce storefront',
-        platform: 'Shopify',
-        summary: 'A Shopify storefront for a fragrance brand with a broad catalogue of perfume oils, sprays and mists.',
-        context: 'Pure Instinct (pureinstinct.co) is an online retailer of pheromone-infused fragrances, with collections including perfume oils, sprays and hair and body mists, press mentions and customer stories.',
-        challenge: 'Improve the Shopify product review testimonial experience by ensuring that featured Key Reviews reflect genuinely positive customer feedback rather than relying solely on star ratings.',
-        role: 'Handled the investigation, identified the review-selection issue, and proposed improvements to the existing Judge.me integration.',
-        implementation: 'Enhanced the review-selection logic to evaluate both star ratings and review text, filtering out clearly negative feedback before displaying testimonials.',
-        uiDecisions: 'Prioritized relevant, trustworthy customer testimonials to improve product credibility and customer confidence.',
-        outcomes: [],
-        tech: [
-            'Shopify Liquid',
-            'Shopify Metafields',
-            'JavaScript',
-            'HTML5',
-            'CSS3',
-            'Judge.me',
-            'API/Metafields',
-            'DOM Manipulation'
-        ],
-        visual: {
-            variant: 'c',
-            accent: '#9FE870',
-            ground: '#F8F9F5'
-        },
-        image: (0, _pureInstinctPngDefault.default)
+        logo: (0, _pureInstinctWebpDefault.default)
     },
     {
-        slug: 'truly-clear',
         name: 'Truly Clear',
-        brand: 'Truly Clear',
-        url: 'https://www.trulyclear.com/',
-        industry: "Skincare \u2014 acne care and anti-aging",
-        type: 'E-commerce storefront',
-        platform: 'Shopify',
-        summary: 'A Shopify storefront for a direct-to-consumer skincare brand selling acne treatments, patches and bundles.',
-        context: 'Truly Clear (trulyclear.com) is a U.S.-based online skincare retailer selling plant-based acne and anti-aging products, including an acne treatment bar, hydrocolloid acne patches, silicone wrinkle patches and exfoliating pads, plus bundles. The storefront combines promotional banners, best sellers, customer testimonials, an ingredients section and a 30-day money-back guarantee.',
-        challenge: 'Create a clear, conversion-focused skincare storefront that helps shoppers explore acne and wrinkle-care products, understand offers, and shop confidently.',
-        role: 'Contributed to Shopify storefront development, implementing custom product-page experiences and refining the shopping journey.',
-        implementation: 'Integrated Judge.me review data through Shopify metafields and developed custom testimonial selection and display logic.',
-        uiDecisions: 'Highlighted product benefits, promotional bundles, customer reviews, and straightforward navigation to reduce friction and build trust.',
-        outcomes: [],
-        tech: [
-            'Shopify',
-            'Shopify Liquid',
-            'JavaScript',
-            'SCSS'
-        ],
-        visual: {
-            variant: 'b',
-            accent: '#C9F5AE',
-            ground: '#17231D'
-        },
-        image: (0, _trylyClearPngDefault.default)
+        logo: (0, _trulyClearWebpDefault.default)
     },
     {
-        slug: 'digicom',
         name: 'Digicom',
-        brand: 'Digicom',
-        url: 'https://www.digicom.io/',
-        industry: 'Digital Marketing & E-commerce Growth',
-        type: 'Agency Website',
-        platform: 'Webflow',
-        summary: "A modern digital agency website showcasing Digicom's growth marketing services, client partnerships, performance results, and e-commerce success stories.",
-        context: 'Digicom is a performance-focused digital marketing agency helping brands scale through paid media, creative strategy, influencer marketing, and conversion rate optimization.',
-        challenge: "Create an engaging agency website that communicates Digicom's expertise, builds trust through client success stories, and helps potential clients explore its services and proven results.",
-        role: 'Front-End Developer, contributing to website development, responsive UI implementation, and interactive content presentation.',
-        implementation: "Developed and refined responsive website sections, service presentations, client case-study layouts, and interactive elements to support the agency's digital presence and lead-generation goals.",
-        uiDecisions: "Used bold typography, strong visual hierarchy, prominent performance metrics, client logos, and structured case-study sections to make the agency's capabilities easy to understand and explore.",
-        outcomes: [],
-        tech: [
-            "Webflow",
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Responsive Design",
-            "CMS"
-        ],
-        visual: {
-            variant: 'b',
-            accent: '#C9F5AE',
-            ground: '#17231D'
-        },
-        image: (0, _digiComPngDefault.default)
+        logo: (0, _digiComPngDefault.default)
     },
     {
-        slug: 'entreprenista',
         name: 'Entreprenista',
-        brand: 'Entreprenista',
-        url: 'https://www.entreprenista.com/',
-        industry: "Media, Entrepreneurship & Women's Business Community",
-        type: 'Content & Community Website',
-        platform: 'Webflow',
-        summary: 'A content-driven digital platform empowering women entrepreneurs through founder stories, business insights, podcasts, and community resources.',
-        context: 'Entreprenista provides a digital destination for women founders to discover entrepreneurial knowledge, inspiring stories, educational content, and opportunities to connect with a supportive business community.',
-        challenge: 'Develop and maintain an engaging, responsive website that presents a large volume of editorial content while preserving marketing attribution as visitors navigate between articles and blog content.',
-        role: 'Lead Website Developer, responsible for website development, front-end implementation, and custom JavaScript functionality.',
-        implementation: "Led website development and implemented a custom JavaScript solution to capture UTM parameters from the current URL and dynamically append them to blog content links, helping preserve campaign attribution throughout the user's browsing journey.",
-        uiDecisions: 'Prioritized clear content hierarchy, intuitive navigation, responsive layouts, and accessible content links to support article discovery and provide a seamless browsing experience across devices.',
-        outcomes: [],
-        tech: [
-            "Webflow",
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "DOM Manipulation",
-            "UTM Tracking",
-            "Responsive Web Design"
-        ],
-        visual: {
-            variant: 'c',
-            accent: '#9FE870',
-            ground: '#F8F9F5'
-        },
-        image: (0, _entreprenistaPngDefault.default)
+        logo: (0, _entreprenistaPngDefault.default)
     },
     {
-        slug: 'selectsoftware-reviews-advisor-form',
-        name: 'Select Software Reviews',
-        brand: 'Select Software Reviews',
-        url: 'https://www.selectsoftwarereviews.com/',
-        industry: 'B2B Software Reviews & Technology Consulting',
-        type: 'Lead Generation & Advisor Consultation',
-        platform: 'Website CMS with HubSpot Integration',
-        summary: 'Maintained and enhanced the master Talk to an Advisor form, creating a streamlined lead-generation experience connected to HubSpot.',
-        context: 'Select Software Reviews helps businesses discover and compare software solutions through expert reviews, recommendations, and personalized advisor guidance.',
-        challenge: "Maintain a reliable and user-friendly advisor inquiry form that captures prospective customers' information and supports lead generation through the website and HubSpot.",
-        role: 'Front-End Developer responsible for updating, managing, and enhancing the master Talk to an Advisor form.',
-        implementation: 'Updated and maintained the master advisor form using HTML5 and custom JavaScript. Implemented form interactions and validation, and integrated the form submission flow with HubSpot to capture and route leads into the CRM.',
-        uiDecisions: 'Focused on a clear form structure, intuitive field interactions, appropriate validation feedback, and a straightforward submission experience to reduce friction for prospective customers.',
-        outcomes: [],
-        tech: [
-            "HTML5",
-            "JavaScript",
-            "CSS3",
-            "HubSpot Forms",
-            "DOM Manipulation",
-            "Form Validation",
-            "CRM Integration"
-        ],
-        visual: {
-            variant: 'a',
-            accent: '#9FE870',
-            ground: '#163D2A'
-        },
-        image: (0, _selectsoftwarereviewsPngDefault.default)
+        name: 'SSR',
+        logo: (0, _ssrPngDefault.default)
     }
 ];
-const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
 
-},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe","url:../assets/projects/digiCom.png":"lWAMa","url:../assets/projects/entreprenista.png":"3NEjH","url:../assets/projects/selectsoftwarereviews.png":"gAWzd"}],"cAnmP":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/clients/pureInstinct.webp":"c7kmF","url:../assets/clients/trulyClear.webp":"8W4Qz","url:../assets/clients/humanImprovement.png":"3eil5","url:../assets/clients/mhw.png":"9RnzF","url:../assets/clients/digiCom.png":"i24XW","url:../assets/clients/entreprenista.png":"9DLaT","url:../assets/clients/ssr.png":"6lYz7"}],"c7kmF":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("pureInstinct.ec57aa12.webp") + "?" + Date.now();
 
-},{}],"6rQ1L":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("mhwLtd.9cd1b52f.png") + "?" + Date.now();
+},{}],"8W4Qz":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("trulyClear.0fff1867.webp") + "?" + Date.now();
 
-},{}],"g70YX":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("pureInstinct.3ee211d9.png") + "?" + Date.now();
+},{}],"3eil5":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("humanImprovement.bce3e7e4.png") + "?" + Date.now();
 
-},{}],"fSpqe":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("trylyClear.9767773d.png") + "?" + Date.now();
+},{}],"9RnzF":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("mhw.5c378314.png") + "?" + Date.now();
 
-},{}],"lWAMa":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("digiCom.85297e8d.png") + "?" + Date.now();
+},{}],"i24XW":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("digiCom.dfe5cb43.png") + "?" + Date.now();
 
-},{}],"3NEjH":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("entreprenista.47d1c88e.png") + "?" + Date.now();
+},{}],"9DLaT":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("entreprenista.fb50ced5.png") + "?" + Date.now();
 
-},{}],"gAWzd":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("selectsoftwarereviews.b2ad4d6e.png") + "?" + Date.now();
+},{}],"6lYz7":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("ssr.a3dddd5a.png") + "?" + Date.now();
 
 },{}],"l5WTQ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f103 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -59995,7 +59900,273 @@ $RefreshReg$(_c, "CtaBand");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../ui/Button.jsx":"gvfVJ","../ui/Reveal.jsx":"i66wo","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bopIB":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../ui/Button.jsx":"gvfVJ","../ui/Reveal.jsx":"i66wo","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"ghvQ2":[function(require,module,exports,__globalThis) {
+// Featured work. Facts in `context`, `industry` and `platform` come from each project's public website.
+// Anything starting with "[To confirm]" is a placeholder for YOUR details and is highlighted on the page.
+// ⚠ NEEDS YOUR APPROVAL: permission to show each project, your exact contribution, and any outcomes.
+// Do not add results or screenshots unless they are real and you are permitted to publish them.
+//
+// To add a real screenshot: put the file in src/assets/ and set  image: new URL('../assets/file.webp', import.meta.url)
+// (or import it) — the placeholder composition is replaced automatically.
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "projects", ()=>projects);
+parcelHelpers.export(exports, "isPlaceholder", ()=>isPlaceholder);
+var _buyHiPng = require("url:../assets/projects/buyHi.png");
+var _buyHiPngDefault = parcelHelpers.interopDefault(_buyHiPng);
+var _mhwLtdPng = require("url:../assets/projects/mhwLtd.png");
+var _mhwLtdPngDefault = parcelHelpers.interopDefault(_mhwLtdPng);
+var _pureInstinctPng = require("url:../assets/projects/pureInstinct.png");
+var _pureInstinctPngDefault = parcelHelpers.interopDefault(_pureInstinctPng);
+var _trylyClearPng = require("url:../assets/projects/trylyClear.png");
+var _trylyClearPngDefault = parcelHelpers.interopDefault(_trylyClearPng);
+var _digiComPng = require("url:../assets/projects/digiCom.png");
+var _digiComPngDefault = parcelHelpers.interopDefault(_digiComPng);
+var _entreprenistaPng = require("url:../assets/projects/entreprenista.png");
+var _entreprenistaPngDefault = parcelHelpers.interopDefault(_entreprenistaPng);
+var _selectsoftwarereviewsPng = require("url:../assets/projects/selectsoftwarereviews.png");
+var _selectsoftwarereviewsPngDefault = parcelHelpers.interopDefault(_selectsoftwarereviewsPng);
+const projects = [
+    {
+        slug: 'buyhi',
+        name: 'Human Improvement',
+        brand: 'Human Improvement',
+        url: 'https://buyhi.co/',
+        industry: "Health & wellness \u2014 dietary supplements",
+        type: 'E-commerce storefront',
+        platform: 'Shopify',
+        summary: 'A Shopify storefront for a supplement brand selling single products, bundles and accessories.',
+        context: 'Human Improvement (buyhi.co) is a supplement brand selling products such as MSM and creatine, plus protein powders, shakers and bundles. The storefront combines a clear hero, benefit highlights, customer reviews and product collections.',
+        challenge: 'Create a dedicated, conversion-focused landing page for the MSM Cellular Detox product while maintaining the existing product detail page experience.',
+        role: 'Led end-to-end frontend development, translating Figma designs into responsive Shopify sections and integrating product functionality.',
+        implementation: 'Built reusable custom Shopify sections, dynamic variant and bundle pricing, subscription integration, sticky add-to-cart functionality, and interactive content modules.',
+        uiDecisions: 'Prioritized mobile responsiveness, clear product messaging, intuitive bundle selection, horizontal scrolling sections, and consistent CTA placement.',
+        outcomes: [],
+        tech: [
+            'Shopify Liquid',
+            'Shopify Metafields',
+            'JavaScript',
+            'HTML5',
+            'SCSS',
+            'Recharge',
+            'Figma'
+        ],
+        visual: {
+            variant: 'a',
+            accent: '#9FE870',
+            ground: '#163D2A'
+        },
+        image: (0, _buyHiPngDefault.default)
+    },
+    {
+        slug: 'mhw-ltd',
+        name: 'MHW Ltd',
+        brand: 'MHW',
+        url: 'https://www.mhwltd.com/',
+        industry: "Beverage alcohol \u2014 importing, wholesale and back-office services",
+        type: 'Corporate website with client resources',
+        platform: 'WordPress',
+        summary: 'A content-rich corporate website for a US and EU beverage alcohol importer and wholesaler.',
+        context: 'MHW is a beverage alcohol importer, wholesaler and back-office service provider for the US and EU. The website explains its services, company and insights, and links clients and customers to portals and order tools.',
+        challenge: 'Maintaining and improving the MHW WordPress website while ensuring plugin compatibility, security, performance, and consistent functionality across staging and production environments.',
+        role: 'Led WordPress maintenance, troubleshooting, environment updates, mega menu improvements, and performance optimization.',
+        implementation: 'Updated WordPress core, PHP, and plugins; resolved widget and Gutenberg reusable block issues; debugged desktop navigation; and managed WP Rocket licensing and caching configurations.',
+        uiDecisions: 'Improved desktop mega menu accessibility and navigation consistency while preserving mobile functionality and responsive layouts.',
+        outcomes: [],
+        tech: [
+            'WordPress',
+            'PHP',
+            'JavaScript',
+            'Gutenberg',
+            'WP Engine',
+            'WP Rocket',
+            'HTML5',
+            'CSS3'
+        ],
+        visual: {
+            variant: 'b',
+            accent: '#C9F5AE',
+            ground: '#17231D'
+        },
+        image: (0, _mhwLtdPngDefault.default)
+    },
+    {
+        slug: 'pure-instinct',
+        name: 'Pure Instinct',
+        brand: 'Pure Instinct',
+        url: 'https://pureinstinct.co/',
+        industry: "Beauty \u2014 pheromone fragrances",
+        type: 'E-commerce storefront',
+        platform: 'Shopify',
+        summary: 'A Shopify storefront for a fragrance brand with a broad catalogue of perfume oils, sprays and mists.',
+        context: 'Pure Instinct (pureinstinct.co) is an online retailer of pheromone-infused fragrances, with collections including perfume oils, sprays and hair and body mists, press mentions and customer stories.',
+        challenge: 'Improve the Shopify product review testimonial experience by ensuring that featured Key Reviews reflect genuinely positive customer feedback rather than relying solely on star ratings.',
+        role: 'Handled the investigation, identified the review-selection issue, and proposed improvements to the existing Judge.me integration.',
+        implementation: 'Enhanced the review-selection logic to evaluate both star ratings and review text, filtering out clearly negative feedback before displaying testimonials.',
+        uiDecisions: 'Prioritized relevant, trustworthy customer testimonials to improve product credibility and customer confidence.',
+        outcomes: [],
+        tech: [
+            'Shopify Liquid',
+            'Shopify Metafields',
+            'JavaScript',
+            'HTML5',
+            'CSS3',
+            'Judge.me',
+            'API/Metafields',
+            'DOM Manipulation'
+        ],
+        visual: {
+            variant: 'c',
+            accent: '#9FE870',
+            ground: '#F8F9F5'
+        },
+        image: (0, _pureInstinctPngDefault.default)
+    },
+    {
+        slug: 'truly-clear',
+        name: 'Truly Clear',
+        brand: 'Truly Clear',
+        url: 'https://www.trulyclear.com/',
+        industry: "Skincare \u2014 acne care and anti-aging",
+        type: 'E-commerce storefront',
+        platform: 'Shopify',
+        summary: 'A Shopify storefront for a direct-to-consumer skincare brand selling acne treatments, patches and bundles.',
+        context: 'Truly Clear (trulyclear.com) is a U.S.-based online skincare retailer selling plant-based acne and anti-aging products, including an acne treatment bar, hydrocolloid acne patches, silicone wrinkle patches and exfoliating pads, plus bundles. The storefront combines promotional banners, best sellers, customer testimonials, an ingredients section and a 30-day money-back guarantee.',
+        challenge: 'Create a clear, conversion-focused skincare storefront that helps shoppers explore acne and wrinkle-care products, understand offers, and shop confidently.',
+        role: 'Contributed to Shopify storefront development, implementing custom product-page experiences and refining the shopping journey.',
+        implementation: 'Integrated Judge.me review data through Shopify metafields and developed custom testimonial selection and display logic.',
+        uiDecisions: 'Highlighted product benefits, promotional bundles, customer reviews, and straightforward navigation to reduce friction and build trust.',
+        outcomes: [],
+        tech: [
+            'Shopify',
+            'Shopify Liquid',
+            'JavaScript',
+            'SCSS'
+        ],
+        visual: {
+            variant: 'b',
+            accent: '#C9F5AE',
+            ground: '#17231D'
+        },
+        image: (0, _trylyClearPngDefault.default)
+    },
+    {
+        slug: 'digicom',
+        name: 'Digicom',
+        brand: 'Digicom',
+        url: 'https://www.digicom.io/',
+        industry: 'Digital Marketing & E-commerce Growth',
+        type: 'Agency Website',
+        platform: 'Webflow',
+        summary: "A modern digital agency website showcasing Digicom's growth marketing services, client partnerships, performance results, and e-commerce success stories.",
+        context: 'Digicom is a performance-focused digital marketing agency helping brands scale through paid media, creative strategy, influencer marketing, and conversion rate optimization.',
+        challenge: "Create an engaging agency website that communicates Digicom's expertise, builds trust through client success stories, and helps potential clients explore its services and proven results.",
+        role: 'Front-End Developer, contributing to website development, responsive UI implementation, and interactive content presentation.',
+        implementation: "Developed and refined responsive website sections, service presentations, client case-study layouts, and interactive elements to support the agency's digital presence and lead-generation goals.",
+        uiDecisions: "Used bold typography, strong visual hierarchy, prominent performance metrics, client logos, and structured case-study sections to make the agency's capabilities easy to understand and explore.",
+        outcomes: [],
+        tech: [
+            "Webflow",
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            "CMS"
+        ],
+        visual: {
+            variant: 'b',
+            accent: '#C9F5AE',
+            ground: '#17231D'
+        },
+        image: (0, _digiComPngDefault.default)
+    },
+    {
+        slug: 'entreprenista',
+        name: 'Entreprenista',
+        brand: 'Entreprenista',
+        url: 'https://www.entreprenista.com/',
+        industry: "Media, Entrepreneurship & Women's Business Community",
+        type: 'Content & Community Website',
+        platform: 'Webflow',
+        summary: 'A content-driven digital platform empowering women entrepreneurs through founder stories, business insights, podcasts, and community resources.',
+        context: 'Entreprenista provides a digital destination for women founders to discover entrepreneurial knowledge, inspiring stories, educational content, and opportunities to connect with a supportive business community.',
+        challenge: 'Develop and maintain an engaging, responsive website that presents a large volume of editorial content while preserving marketing attribution as visitors navigate between articles and blog content.',
+        role: 'Lead Website Developer, responsible for website development, front-end implementation, and custom JavaScript functionality.',
+        implementation: "Led website development and implemented a custom JavaScript solution to capture UTM parameters from the current URL and dynamically append them to blog content links, helping preserve campaign attribution throughout the user's browsing journey.",
+        uiDecisions: 'Prioritized clear content hierarchy, intuitive navigation, responsive layouts, and accessible content links to support article discovery and provide a seamless browsing experience across devices.',
+        outcomes: [],
+        tech: [
+            "Webflow",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "DOM Manipulation",
+            "UTM Tracking",
+            "Responsive Web Design"
+        ],
+        visual: {
+            variant: 'c',
+            accent: '#9FE870',
+            ground: '#F8F9F5'
+        },
+        image: (0, _entreprenistaPngDefault.default)
+    },
+    {
+        slug: 'selectsoftware-reviews-advisor-form',
+        name: 'Select Software Reviews',
+        brand: 'Select Software Reviews',
+        url: 'https://www.selectsoftwarereviews.com/',
+        industry: 'B2B Software Reviews & Technology Consulting',
+        type: 'Lead Generation & Advisor Consultation',
+        platform: 'Website CMS with HubSpot Integration',
+        summary: 'Maintained and enhanced the master Talk to an Advisor form, creating a streamlined lead-generation experience connected to HubSpot.',
+        context: 'Select Software Reviews helps businesses discover and compare software solutions through expert reviews, recommendations, and personalized advisor guidance.',
+        challenge: "Maintain a reliable and user-friendly advisor inquiry form that captures prospective customers' information and supports lead generation through the website and HubSpot.",
+        role: 'Front-End Developer responsible for updating, managing, and enhancing the master Talk to an Advisor form.',
+        implementation: 'Updated and maintained the master advisor form using HTML5 and custom JavaScript. Implemented form interactions and validation, and integrated the form submission flow with HubSpot to capture and route leads into the CRM.',
+        uiDecisions: 'Focused on a clear form structure, intuitive field interactions, appropriate validation feedback, and a straightforward submission experience to reduce friction for prospective customers.',
+        outcomes: [],
+        tech: [
+            "HTML5",
+            "JavaScript",
+            "CSS3",
+            "HubSpot Forms",
+            "DOM Manipulation",
+            "Form Validation",
+            "CRM Integration"
+        ],
+        visual: {
+            variant: 'a',
+            accent: '#9FE870',
+            ground: '#163D2A'
+        },
+        image: (0, _selectsoftwarereviewsPngDefault.default)
+    }
+];
+const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
+
+},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe","url:../assets/projects/digiCom.png":"lWAMa","url:../assets/projects/entreprenista.png":"3NEjH","url:../assets/projects/selectsoftwarereviews.png":"gAWzd"}],"cAnmP":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
+
+},{}],"6rQ1L":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("mhwLtd.9cd1b52f.png") + "?" + Date.now();
+
+},{}],"g70YX":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("pureInstinct.3ee211d9.png") + "?" + Date.now();
+
+},{}],"fSpqe":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("trylyClear.9767773d.png") + "?" + Date.now();
+
+},{}],"lWAMa":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("digiCom.85297e8d.png") + "?" + Date.now();
+
+},{}],"3NEjH":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("entreprenista.47d1c88e.png") + "?" + Date.now();
+
+},{}],"gAWzd":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("selectsoftwarereviews.b2ad4d6e.png") + "?" + Date.now();
+
+},{}],"bopIB":[function(require,module,exports,__globalThis) {
 // ⚠ DEMO CONTENT — these are placeholders so the layout can be reviewed.
 // Replace every entry with exact client wording, name, title and company (with permission),
 // then remove `demo: true`. Never publish demo entries as real client feedback.
