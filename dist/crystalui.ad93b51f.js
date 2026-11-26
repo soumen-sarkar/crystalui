@@ -58913,6 +58913,10 @@ var _trylyClearPng = require("url:../assets/projects/trylyClear.png");
 var _trylyClearPngDefault = parcelHelpers.interopDefault(_trylyClearPng);
 var _digiComPng = require("url:../assets/projects/digiCom.png");
 var _digiComPngDefault = parcelHelpers.interopDefault(_digiComPng);
+var _entreprenistaPng = require("url:../assets/projects/entreprenista.png");
+var _entreprenistaPngDefault = parcelHelpers.interopDefault(_entreprenistaPng);
+var _selectsoftwarereviewsPng = require("url:../assets/projects/selectsoftwarereviews.png");
+var _selectsoftwarereviewsPngDefault = parcelHelpers.interopDefault(_selectsoftwarereviewsPng);
 const projects = [
     {
         slug: 'buyhi',
@@ -59066,11 +59070,73 @@ const projects = [
             ground: '#17231D'
         },
         image: (0, _digiComPngDefault.default)
+    },
+    {
+        slug: 'entreprenista',
+        name: 'Entreprenista',
+        brand: 'Entreprenista',
+        url: 'https://www.entreprenista.com/',
+        industry: "Media, Entrepreneurship & Women's Business Community",
+        type: 'Content & Community Website',
+        platform: 'Webflow',
+        summary: 'A content-driven digital platform empowering women entrepreneurs through founder stories, business insights, podcasts, and community resources.',
+        context: 'Entreprenista provides a digital destination for women founders to discover entrepreneurial knowledge, inspiring stories, educational content, and opportunities to connect with a supportive business community.',
+        challenge: 'Develop and maintain an engaging, responsive website that presents a large volume of editorial content while preserving marketing attribution as visitors navigate between articles and blog content.',
+        role: 'Lead Website Developer, responsible for website development, front-end implementation, and custom JavaScript functionality.',
+        implementation: "Led website development and implemented a custom JavaScript solution to capture UTM parameters from the current URL and dynamically append them to blog content links, helping preserve campaign attribution throughout the user's browsing journey.",
+        uiDecisions: 'Prioritized clear content hierarchy, intuitive navigation, responsive layouts, and accessible content links to support article discovery and provide a seamless browsing experience across devices.',
+        outcomes: [],
+        tech: [
+            "Webflow",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "DOM Manipulation",
+            "UTM Tracking",
+            "Responsive Web Design"
+        ],
+        visual: {
+            variant: 'c',
+            accent: '#9FE870',
+            ground: '#F8F9F5'
+        },
+        image: (0, _entreprenistaPngDefault.default)
+    },
+    {
+        slug: 'selectsoftware-reviews-advisor-form',
+        name: 'Select Software Reviews',
+        brand: 'Select Software Reviews',
+        url: 'https://www.selectsoftwarereviews.com/',
+        industry: 'B2B Software Reviews & Technology Consulting',
+        type: 'Lead Generation & Advisor Consultation',
+        platform: 'Website CMS with HubSpot Integration',
+        summary: 'Maintained and enhanced the master Talk to an Advisor form, creating a streamlined lead-generation experience connected to HubSpot.',
+        context: 'Select Software Reviews helps businesses discover and compare software solutions through expert reviews, recommendations, and personalized advisor guidance.',
+        challenge: "Maintain a reliable and user-friendly advisor inquiry form that captures prospective customers' information and supports lead generation through the website and HubSpot.",
+        role: 'Front-End Developer responsible for updating, managing, and enhancing the master Talk to an Advisor form.',
+        implementation: 'Updated and maintained the master advisor form using HTML5 and custom JavaScript. Implemented form interactions and validation, and integrated the form submission flow with HubSpot to capture and route leads into the CRM.',
+        uiDecisions: 'Focused on a clear form structure, intuitive field interactions, appropriate validation feedback, and a straightforward submission experience to reduce friction for prospective customers.',
+        outcomes: [],
+        tech: [
+            "HTML5",
+            "JavaScript",
+            "CSS3",
+            "HubSpot Forms",
+            "DOM Manipulation",
+            "Form Validation",
+            "CRM Integration"
+        ],
+        visual: {
+            variant: 'a',
+            accent: '#9FE870',
+            ground: '#163D2A'
+        },
+        image: (0, _selectsoftwarereviewsPngDefault.default)
     }
 ];
 const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
 
-},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe","url:../assets/projects/digiCom.png":"lWAMa"}],"cAnmP":[function(require,module,exports,__globalThis) {
+},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe","url:../assets/projects/digiCom.png":"lWAMa","url:../assets/projects/entreprenista.png":"3NEjH","url:../assets/projects/selectsoftwarereviews.png":"gAWzd"}],"cAnmP":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
 
 },{}],"6rQ1L":[function(require,module,exports,__globalThis) {
@@ -59084,6 +59150,12 @@ module.exports = module.bundle.resolve("trylyClear.9767773d.png") + "?" + Date.n
 
 },{}],"lWAMa":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("digiCom.85297e8d.png") + "?" + Date.now();
+
+},{}],"3NEjH":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("entreprenista.47d1c88e.png") + "?" + Date.now();
+
+},{}],"gAWzd":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("selectsoftwarereviews.b2ad4d6e.png") + "?" + Date.now();
 
 },{}],"l5WTQ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f103 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
