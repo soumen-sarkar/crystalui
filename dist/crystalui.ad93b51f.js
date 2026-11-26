@@ -58909,6 +58909,8 @@ var _mhwLtdPng = require("url:../assets/projects/mhwLtd.png");
 var _mhwLtdPngDefault = parcelHelpers.interopDefault(_mhwLtdPng);
 var _pureInstinctPng = require("url:../assets/projects/pureInstinct.png");
 var _pureInstinctPngDefault = parcelHelpers.interopDefault(_pureInstinctPng);
+var _trylyClearPng = require("url:../assets/projects/trylyClear.png");
+var _trylyClearPngDefault = parcelHelpers.interopDefault(_trylyClearPng);
 const projects = [
     {
         slug: 'buyhi',
@@ -59004,11 +59006,39 @@ const projects = [
             ground: '#F8F9F5'
         },
         image: (0, _pureInstinctPngDefault.default)
+    },
+    {
+        slug: 'truly-clear',
+        name: 'Truly Clear',
+        brand: 'Truly Clear',
+        url: 'https://www.trulyclear.com/',
+        industry: "Skincare \u2014 acne care and anti-aging",
+        type: 'E-commerce storefront',
+        platform: 'Shopify',
+        summary: 'A Shopify storefront for a direct-to-consumer skincare brand selling acne treatments, patches and bundles.',
+        context: 'Truly Clear (trulyclear.com) is a U.S.-based online skincare retailer selling plant-based acne and anti-aging products, including an acne treatment bar, hydrocolloid acne patches, silicone wrinkle patches and exfoliating pads, plus bundles. The storefront combines promotional banners, best sellers, customer testimonials, an ingredients section and a 30-day money-back guarantee.',
+        challenge: 'Create a clear, conversion-focused skincare storefront that helps shoppers explore acne and wrinkle-care products, understand offers, and shop confidently.',
+        role: 'Contributed to Shopify storefront development, implementing custom product-page experiences and refining the shopping journey.',
+        implementation: 'Integrated Judge.me review data through Shopify metafields and developed custom testimonial selection and display logic.',
+        uiDecisions: 'Highlighted product benefits, promotional bundles, customer reviews, and straightforward navigation to reduce friction and build trust.',
+        outcomes: [],
+        tech: [
+            'Shopify',
+            'Shopify Liquid',
+            'JavaScript',
+            'SCSS'
+        ],
+        visual: {
+            variant: 'b',
+            accent: '#C9F5AE',
+            ground: '#17231D'
+        },
+        image: (0, _trylyClearPngDefault.default)
     }
 ];
 const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
 
-},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"cAnmP":[function(require,module,exports,__globalThis) {
+},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe"}],"cAnmP":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
 
 },{}],"6rQ1L":[function(require,module,exports,__globalThis) {
@@ -59016,6 +59046,9 @@ module.exports = module.bundle.resolve("mhwLtd.9cd1b52f.png") + "?" + Date.now()
 
 },{}],"g70YX":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("pureInstinct.3ee211d9.png") + "?" + Date.now();
+
+},{}],"fSpqe":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("trylyClear.9767773d.png") + "?" + Date.now();
 
 },{}],"l5WTQ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f103 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");

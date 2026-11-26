@@ -9,6 +9,7 @@
 import buyhiImg from 'url:../assets/projects/buyHi.png';
 import mhwImg from 'url:../assets/projects/mhwLtd.png';
 import pureInstinct from 'url:../assets/projects/pureInstinct.png';
+import trylyClear from 'url:../assets/projects/trylyClear.png';
 
 export const projects = [
   {
@@ -70,6 +71,26 @@ export const projects = [
     tech: ['Shopify Liquid', 'Shopify Metafields', 'JavaScript', 'HTML5', 'CSS3', 'Judge.me', 'API/Metafields', 'DOM Manipulation'],
     visual: { variant: 'c', accent: '#9FE870', ground: '#F8F9F5' },
     image: pureInstinct,
+  },
+  {
+    slug: 'truly-clear',
+    name: 'Truly Clear',
+    brand: 'Truly Clear',
+    url: 'https://www.trulyclear.com/',
+    industry: 'Skincare — acne care and anti-aging',
+    type: 'E-commerce storefront',
+    platform: 'Shopify',
+    summary: 'A Shopify storefront for a direct-to-consumer skincare brand selling acne treatments, patches and bundles.',
+    context:
+      'Truly Clear (trulyclear.com) is a U.S.-based online skincare retailer selling plant-based acne and anti-aging products, including an acne treatment bar, hydrocolloid acne patches, silicone wrinkle patches and exfoliating pads, plus bundles. The storefront combines promotional banners, best sellers, customer testimonials, an ingredients section and a 30-day money-back guarantee.',
+    challenge: 'Create a clear, conversion-focused skincare storefront that helps shoppers explore acne and wrinkle-care products, understand offers, and shop confidently.',
+    role: 'Contributed to Shopify storefront development, implementing custom product-page experiences and refining the shopping journey.',
+    implementation: 'Integrated Judge.me review data through Shopify metafields and developed custom testimonial selection and display logic.',
+    uiDecisions: 'Highlighted product benefits, promotional bundles, customer reviews, and straightforward navigation to reduce friction and build trust.',
+    outcomes: [], // Add only verified outcomes; leave empty otherwise.
+    tech: ['Shopify', 'Shopify Liquid', 'JavaScript', 'SCSS'],
+    visual: { variant: 'b', accent: '#C9F5AE', ground: '#17231D' },
+    image: trylyClear,
   },
 ];
 
