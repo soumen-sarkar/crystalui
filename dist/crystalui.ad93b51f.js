@@ -58911,6 +58911,8 @@ var _pureInstinctPng = require("url:../assets/projects/pureInstinct.png");
 var _pureInstinctPngDefault = parcelHelpers.interopDefault(_pureInstinctPng);
 var _trylyClearPng = require("url:../assets/projects/trylyClear.png");
 var _trylyClearPngDefault = parcelHelpers.interopDefault(_trylyClearPng);
+var _digiComPng = require("url:../assets/projects/digiCom.png");
+var _digiComPngDefault = parcelHelpers.interopDefault(_digiComPng);
 const projects = [
     {
         slug: 'buyhi',
@@ -59034,11 +59036,41 @@ const projects = [
             ground: '#17231D'
         },
         image: (0, _trylyClearPngDefault.default)
+    },
+    {
+        slug: 'digicom',
+        name: 'Digicom',
+        brand: 'Digicom',
+        url: 'https://www.digicom.io/',
+        industry: 'Digital Marketing & E-commerce Growth',
+        type: 'Agency Website',
+        platform: 'Webflow',
+        summary: "A modern digital agency website showcasing Digicom's growth marketing services, client partnerships, performance results, and e-commerce success stories.",
+        context: 'Digicom is a performance-focused digital marketing agency helping brands scale through paid media, creative strategy, influencer marketing, and conversion rate optimization.',
+        challenge: "Create an engaging agency website that communicates Digicom's expertise, builds trust through client success stories, and helps potential clients explore its services and proven results.",
+        role: 'Front-End Developer, contributing to website development, responsive UI implementation, and interactive content presentation.',
+        implementation: "Developed and refined responsive website sections, service presentations, client case-study layouts, and interactive elements to support the agency's digital presence and lead-generation goals.",
+        uiDecisions: "Used bold typography, strong visual hierarchy, prominent performance metrics, client logos, and structured case-study sections to make the agency's capabilities easy to understand and explore.",
+        outcomes: [],
+        tech: [
+            "Webflow",
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            "CMS"
+        ],
+        visual: {
+            variant: 'b',
+            accent: '#C9F5AE',
+            ground: '#17231D'
+        },
+        image: (0, _digiComPngDefault.default)
     }
 ];
 const isPlaceholder = (text)=>typeof text === 'string' && text.startsWith('[To confirm]');
 
-},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe"}],"cAnmP":[function(require,module,exports,__globalThis) {
+},{"url:../assets/projects/buyHi.png":"cAnmP","url:../assets/projects/mhwLtd.png":"6rQ1L","url:../assets/projects/pureInstinct.png":"g70YX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../assets/projects/trylyClear.png":"fSpqe","url:../assets/projects/digiCom.png":"lWAMa"}],"cAnmP":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("buyHi.70d17f80.png") + "?" + Date.now();
 
 },{}],"6rQ1L":[function(require,module,exports,__globalThis) {
@@ -59049,6 +59081,9 @@ module.exports = module.bundle.resolve("pureInstinct.3ee211d9.png") + "?" + Date
 
 },{}],"fSpqe":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("trylyClear.9767773d.png") + "?" + Date.now();
+
+},{}],"lWAMa":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("digiCom.85297e8d.png") + "?" + Date.now();
 
 },{}],"l5WTQ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f103 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");

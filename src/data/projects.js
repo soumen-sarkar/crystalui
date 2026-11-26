@@ -10,6 +10,7 @@ import buyhiImg from 'url:../assets/projects/buyHi.png';
 import mhwImg from 'url:../assets/projects/mhwLtd.png';
 import pureInstinct from 'url:../assets/projects/pureInstinct.png';
 import trylyClear from 'url:../assets/projects/trylyClear.png';
+import digiCom from 'url:../assets/projects/digiCom.png';
 
 export const projects = [
   {
@@ -91,6 +92,31 @@ export const projects = [
     tech: ['Shopify', 'Shopify Liquid', 'JavaScript', 'SCSS'],
     visual: { variant: 'b', accent: '#C9F5AE', ground: '#17231D' },
     image: trylyClear,
+  },
+  {
+    slug: 'digicom',
+    name: 'Digicom',
+    brand: 'Digicom',
+    url: 'https://www.digicom.io/',
+    industry: 'Digital Marketing & E-commerce Growth',
+    type: 'Agency Website',
+    platform: 'Webflow',
+    summary: "A modern digital agency website showcasing Digicom's growth marketing services, client partnerships, performance results, and e-commerce success stories.",
+    context:
+      'Digicom is a performance-focused digital marketing agency helping brands scale through paid media, creative strategy, influencer marketing, and conversion rate optimization.',
+    challenge: "Create an engaging agency website that communicates Digicom's expertise, builds trust through client success stories, and helps potential clients explore its services and proven results.",
+    role: 'Front-End Developer, contributing to website development, responsive UI implementation, and interactive content presentation.',
+    implementation: "Developed and refined responsive website sections, service presentations, client case-study layouts, and interactive elements to support the agency's digital presence and lead-generation goals.",
+    uiDecisions: "Used bold typography, strong visual hierarchy, prominent performance metrics, client logos, and structured case-study sections to make the agency's capabilities easy to understand and explore.",
+    outcomes: [], // Add only verified outcomes, e.g. 'Reduced theme JavaScript by X%' — leave empty otherwise.
+    tech: ["Webflow",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Design",
+    "CMS"],
+    visual: { variant: 'b', accent: '#C9F5AE', ground: '#17231D' },
+    image: digiCom,
   },
 ];
 
